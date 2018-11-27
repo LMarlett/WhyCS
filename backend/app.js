@@ -1,7 +1,10 @@
 const bodyParser = require('body-parser');
+const logger = require('morgan');
 const express = require('express');
 const models = require('./models');
 
+// This will be our application entry. We'll setup our server here.
+const http = require('http');
 const PORT = process.env.PORT || 8000;
 
 const app = express();
