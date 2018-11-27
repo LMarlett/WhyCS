@@ -1,6 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins);
 @import url(https://use.fontawesome.com/releases/v5.3.1/css/all.css);
-
+/* 
+* Main Styles
+* Survey Intake Form Styles
+*/
 
 .titleText {
     color: #2699FB !important;
@@ -45,4 +48,43 @@
     width: 90%; 
     height: auto;
     float: left;
+}
+
+/* ======= SURVEY INTAKE FORM STYLES ======= */
+.intake-form {
+    width: 60%;
+    margin: auto;
+    padding: 0 20px;
+    text-align: left;
+}
+/* form width on mobile */
+@media only screen and (max-width : 736px) {
+    .intake-form {
+        width: 90%;
+        padding: 0;
+    }
+}
+.intake-form label {
+    color: grey;
+    width: 30%;
+}
+.intake-form .gender {
+    margin-bottom: -20px;
+}
+.intake-form .radio {
+    width: 30%;
+    text-align: center;
+    display: inline;
+    margin: 0;
+}
+.intake-form .radio:first-child {
+    margin-left: 5px;
+}
+@media only screen and (max-width : 1001px) {
+    .intake-form .radio {
+        width: 20%;
+    }
+}
+.intake-form div {
+    margin: 20px 0px;
 }
