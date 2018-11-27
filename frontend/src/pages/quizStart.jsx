@@ -11,7 +11,7 @@ class QuizStart extends Component {
       <Header />
       <br/><br/>
       <Row>
-      <Col sm="12">
+      <Col Col sm="12" md={{ size: 8, offset: 2 }}>
       <Card body className="text-center" inverse style={{borderColor: 'white' }}> 
         <CardTitle><div className="thirdText">WhyCS Quiz</div></CardTitle>
         <br/>
