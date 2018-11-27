@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+@import url(https://use.fontawesome.com/releases/v5.3.1/css/all.css);
+
+.headerLogo {
+    width: 20%;
+    height: auto;
+    float: left;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.headerText {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    color: #14B3ED;
+}
+
+.navbarText {
+     color: #2699FB !important;
+     font-family: 'Poppins', sans-serif !important;
+
+}
+
+.navbarColor{
+    color: white;
+  
+}
