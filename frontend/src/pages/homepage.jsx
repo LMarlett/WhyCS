@@ -15,7 +15,7 @@ Col
 import '../pages/pages.css';
 import big from '../images/large.png';
 
-class About extends Component {
+class Home extends Component {
   constructor(props) {
     super(props);
 
@@ -65,7 +65,7 @@ class About extends Component {
               qui ratione voluptatem sequi nesciunt.       </div></CardText>
               <br/>
 
-        <NavLink href="/startwhycsquiz">
+        <NavLink href="/quiz/start">
         <Button outline color="secondary">Take the Quiz</Button>
         </NavLink>
       </Card>
@@ -79,4 +79,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Home;

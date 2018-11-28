@@ -33,7 +33,7 @@ class Footer extends Component {
   render() {
     return (
 <div>
-<header>
+<footer>
 <div className="footerText">WhyCS</div>  
 <div>
         <Navbar color="light" light expand="md">
@@ -59,7 +59,7 @@ class Footer extends Component {
         </Navbar>
       </div>
 
-</header>
+</footer>
 </div>
 
  

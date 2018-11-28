@@ -8,7 +8,7 @@ import {
   Redirect,
   withRouter
 } from "react-router-dom";
-
+import Home from './pages/homepage';
 ////////////////////////////////////////////////////////////
 // 1. Click the public page
 // 2. Click the protected page
@@ -29,6 +29,8 @@ function AuthExample() {
           </li>
         </ul>
         <Route path="/public" component={Public} />
+        
+ 
         <Route path="/login" component={Login} />
         <PrivateRoute path="/protected" component={Protected} />
       </div>
@@ -38,26 +40,9 @@ function AuthExample() {
 
 const fakeAuth = {
   isAuthenticated: false,
-  authenticate(email, password, cb) {
-    fetch('/auth/login', {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
-      headers: {
-          "Content-Type": "application/json; charset=utf-8",
-          // "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
-    }).then(response => {
-      if(response.status === 200) {
-        this.isAuthenticated = true;
-        return response.json();
-      }
-    }).then(body => {
-      console.log(body);
-      cb();
-    });
+  authenticate(cb) {
+    this.isAuthenticated = true;
+    setTimeout(cb, 100); // fake async
   },
   signout(cb) {
     this.isAuthenticated = false;
@@ -69,7 +54,7 @@ const AuthButton = withRouter(
   ({ history }) =>
     fakeAuth.isAuthenticated ? (
       <p>
-        Welcome!{" "}
+        Welcomhgjhgjhge!{" "}
         <button
           onClick={() => {
             fakeAuth.signout(() => history.push("/"));
@@ -112,37 +97,23 @@ function Protected() {
 }
 
 class Login extends React.Component {
-  state = {
-    redirectToReferrer: false,
-    email: "",
-    password: "",
-  };
+  state = { redirectToReferrer: false };
 
   login = () => {
-    fakeAuth.authenticate(this.state.email, this.state.password, () => {
+    fakeAuth.authenticate(() => {
       this.setState({ redirectToReferrer: true });
     });
   };
-
-  emailChanged = (event) => {
-    this.setState({ email: event.target.value });
-  }
-
-  passwordChanged = (event) => {
-    this.setState({ password: event.target.value });
-  }
 
   render() {
     let { from } = this.props.location.state || { from: { pathname: "/" } };
     let { redirectToReferrer } = this.state;
 
-    if (redirectToReferrer) return <Redirect to={from} />;
-
+    if (redirectToReferrer) return <Redirect to={from}/>;
+ 
     return (
       <div>
         <p>You must log in to view the page at {from.pathname}</p>
-        <input type="text" placeholder="Email" value={this.state.email} onChange={this.emailChanged} />
-        <input type="text" placeholder="Password" value={this.state.password} onChange={this.passwordChanged} />
         <button onClick={this.login}>Log in</button>
       </div>
     );

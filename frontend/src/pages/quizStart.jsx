@@ -2,10 +2,32 @@ import React, { Component } from 'react';
 import '../pages/pages.css';
 import Header from '../components/headerComponent/header';
 import { Card,CardImg,CardText,CardBody,CardTitle,CardSubtitle, NavLink,FormGroup,Label,Input,Button,Row,Col,Container } from 'reactstrap';
-//import { AvForm, AvField } from '..availity-reactstrap-validation';
- 
+import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
+import { Redirect } from 'react-router'
+
 class QuizStart extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handleValidSubmit = this.handleValidSubmit.bind(this);
+    this.state = {      
+      fireRedirect: false
+    };
+  }
+
+  handleValidSubmit(event, values) {
+    this.setState({values});
+    event.preventDefault()
+    this.setState({ fireRedirect: true })
+  }
+ 
+
+
   render() {
+    const { from } = this.props.location.state || '/'
+
+    const { fireRedirect } = this.state
+
     return (
       <div>
       <Header />
@@ -23,7 +45,67 @@ class QuizStart extends Component {
           </div>
           <div className="textCenter">Select a choice that means more to you</div>
         </CardText>
-        <br/><br/><br/>
+        <br/>
+       
+
+      <Row> 
+      <Col Col sm="12" md={{ size: 6, offset: 3 }}>
+      <AvForm className="text-form" onValidSubmit={this.handleValidSubmit}>
+ 
+             <AvField className="intake-form" name="zip" label="Zip" type="number"  placeHolder="00000" 
+             validate={{
+               number: true,
+               minLength: {value: 5},
+               maxLength: {value: 5},
+               required: {value: true},
+
+              }}/>
+             <AvField className="intake-form" name="career" label="Career Field" type="text"  errorMessage="Please enter your career type" 
+             validate={{
+            required: {value: true},
+            pattern: {value: '^[A-Za-z0-9]+$'},
+            minLength: {value: 3},
+            maxLength: {value: 25}
+          }} />
+
+            <Label>Gender</Label>
+           <AvRadioGroup className="text" inline name="gender"  required>
+            <AvRadio label="Female" value="female" />
+            <AvRadio label="Male" value="male" />
+            <AvRadio label="Other" value="other" />
+          </AvRadioGroup>
+
+            <AvField type="select" className="intake-form"  name="select" label="Age Range" helpMessage="Please select an age group">
+            <option>18 or less</option>
+            <option>19-25</option>
+            <option>26-35</option>
+            <option>36-45</option>
+            <option>46-55</option>
+            <option>55+</option>
+            </AvField>
+
+         <Button className='btn' outline color="secondary">Start Quiz</Button>      
+        </AvForm>
+        
+        </Col>
+        </Row>
+        
+      </Card>
+     </Col>
+    </Row>
+
+        {this.state.values && <div>
+          <h5 className="text">Submission values</h5>
+          Values: <pre>{JSON.stringify(this.state.values, null, 2)}</pre>
+        </div>}
+        
+        {fireRedirect && (<Redirect to={from || '/quiz/q1'}/>
+        )}
+ 
+            
+
+             {/*
+    <NavLink href="/whycsquiz">         </NavLink>
         <FormGroup className="intake-form">
           <div>
             <Label for="zip">Zip</Label>
@@ -52,9 +134,11 @@ class QuizStart extends Component {
         <NavLink href="/whycsquiz">
         <Button outline color="secondary">Start Quiz</Button>
         </NavLink>
-      </Card>
-     </Col>
-    </Row>
+       
+*/}
+
+    
+
   </div>
   );
   }

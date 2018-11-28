@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/headerComponent/header';
 
- class SignUp extends Component {
+ class Error extends Component {
   render() {
     return (
          <div>
@@ -13,4 +13,4 @@ import Header from '../components/headerComponent/header';
   }
 }
 
-export default SignUp;
+export default Error;
