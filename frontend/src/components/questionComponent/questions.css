@@ -1,0 +1,25 @@
+.center{
+    text-align: center;
+
+}
+
+.quizbtnL{
+    float:left;
+    width: 40%;
+    height: 400px;
+    text-align: center;
+    padding: 15px 32px;
+    white-space: normal !important;
+
+}
+
+.quizbtnR{
+    float:right;
+    width: 40%;
+    height: 400px;
+    text-align: center;
+    padding: 15px 32px;
+    white-space: normal !important;
+
+
+}
