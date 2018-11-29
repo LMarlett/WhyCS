@@ -18,11 +18,30 @@ import { Redirect } from 'react-router'
   }
 
   handleValidSubmit(event, values) {
-     alert(event.target.id);    
-
-    this.setState({values});
-    event.preventDefault()
-    this.setState({ fireRedirect: true })
+     
+     const eventPush = event.target.id;  
+      if(eventPush === "A"){
+        values = "A"
+      } else {
+        if(eventPush === "B"){
+          values = "B"
+      } else {
+        if(eventPush === "C"){
+          values = "C"
+      } else {
+        if(eventPush === "D"){
+          values = "D"
+      } else {
+        if(eventPush === "E"){
+          values = "E"
+      }
+      }
+      }
+      }
+    }
+     event.preventDefault()
+    this.setState({ fireRedirect: true, values })
+    alert(values); 
   }
  
   render() {
@@ -54,18 +73,14 @@ import { Redirect } from 'react-router'
           </Col>
           </Row>
           </Container>
-          {
-            this.state.values && 
-          <div>
-          <h5 className="text">Submission values</h5>
-          Values: <pre>{
-            JSON.stringify(this.state.values, null, 2)
-            }</pre>
-          </div>
-      }
+          
+        {
+            JSON.stringify(this.state.values )
+            }
         
         {fireRedirect && (<Redirect to={from || '/quiz/q2'}/>
         )}
+        
 </div>
       );
   }

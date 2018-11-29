@@ -16,11 +16,39 @@ import { Redirect } from 'react-router'
   }
 
   handleValidSubmit(event, values) {
-     alert(event.target.id);    
+     //alert(event.target.id);    
 
     this.setState({values});
     event.preventDefault()
     this.setState({ fireRedirect: true })
+
+    const eventPush = event.target.id;  
+    if(eventPush === "A"){
+      values = "A"
+    } else {
+      if(eventPush === "B"){
+        values = "B"
+    } else {
+      if(eventPush === "C"){
+        values = "C"
+    } else {
+      if(eventPush === "D"){
+        values = "D"
+    } else {
+      if(eventPush === "E"){
+        values = "E"
+      } else {
+        if(eventPush === "F"){
+          values = "F"
+        }
+    }
+    }
+    }
+    }
+  }
+
+  alert(values); 
+  
   }
  
   render() {
@@ -42,11 +70,11 @@ import { Redirect } from 'react-router'
       
            <AvForm className="text-form" >
  
-           <Button className='quizbtnL' onClick={this.handleValidSubmit} outline color="secondary" id="A">Lorem ipsum dolor sit amet, consectetur 
-             adipisicing elit, sed do eiusmod tempor incididunt ut labore (A)</Button>      
+           <Button className='quizbtnL' onClick={this.handleValidSubmit} outline color="secondary" id="F">Lorem ipsum dolor sit amet, consectetur 
+             adipisicing elit, sed do eiusmod tempor incididunt ut labore (F)</Button>      
  
-           <Button className='quizbtnR btn' onClick={this.handleValidSubmit} outline color="secondary"id="C">Lorem ipsum dolor sit amet, consectetur 
-             adipisicing elit, sed do eiusmod tempor incididunt ut labore (C)</Button>      
+           <Button className='quizbtnR btn' onClick={this.handleValidSubmit} outline color="secondary"id="A">Lorem ipsum dolor sit amet, consectetur 
+             adipisicing elit, sed do eiusmod tempor incididunt ut labore (A)</Button>      
 
           </AvForm>
           </Col>

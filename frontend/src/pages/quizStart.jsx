@@ -95,10 +95,11 @@ class QuizStart extends Component {
      </Col>
     </Row>
 
-        {this.state.values && <div>
-          <h5 className="text">Submission values</h5>
-          Values: <pre>{JSON.stringify(this.state.values, null, 2)}</pre>
-        </div>}
+        {JSON.stringify(this.state.values)}
+       
+        {/* prints out :
+        {"zip":"12132","career":"asdasd","gender":"male","select":"19-25"}
+         */}
         
         {fireRedirect && (<Redirect to={from || '/quiz/q1'}/>
         )}

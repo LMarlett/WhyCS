@@ -16,11 +16,39 @@ import { Redirect } from 'react-router'
   }
 
   handleValidSubmit(event, values) {
-     alert(event.target.id);    
+   //  alert(event.target.id);    
 
     this.setState({values});
     event.preventDefault()
     this.setState({ fireRedirect: true })
+
+    const eventPush = event.target.id;  
+    if(eventPush === "A"){
+      values = "A"
+    } else {
+      if(eventPush === "B"){
+        values = "B"
+    } else {
+      if(eventPush === "C"){
+        values = "C"
+    } else {
+      if(eventPush === "D"){
+        values = "D"
+    } else {
+      if(eventPush === "E"){
+        values = "E"
+      } else {
+        if(eventPush === "F"){
+          values = "F"
+        }
+    }
+    }
+    }
+    }
+  }
+
+  alert(values); 
+  
   }
  
   render() {
