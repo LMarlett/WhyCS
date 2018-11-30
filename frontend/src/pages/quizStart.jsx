@@ -16,10 +16,12 @@ class QuizStart extends Component {
   }
 
   handleValidSubmit(event, values) {
-    this.setState({values});
-    event.preventDefault()
-    this.setState({ fireRedirect: true })
-  }
+     event.preventDefault()
+    this.setState({ 
+      fireRedirect: true, values })
+    localStorage.setItem('inputs', JSON.stringify(values));
+
+   }
  
 
 
@@ -95,8 +97,8 @@ class QuizStart extends Component {
      </Col>
     </Row>
 
-        {JSON.stringify(this.state.values)}
-       
+        {/*JSON.stringify(this.state.values)*/}
+
         {/* prints out :
         {"zip":"12132","career":"asdasd","gender":"male","select":"19-25"}
          */}

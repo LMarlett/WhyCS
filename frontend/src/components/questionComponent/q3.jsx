@@ -18,35 +18,70 @@ import { Redirect } from 'react-router'
   handleValidSubmit(event, values) {
      //alert(event.target.id);    
 
-    this.setState({values});
-    event.preventDefault()
-    this.setState({ fireRedirect: true })
+     event.preventDefault()
+    this.setState({ fireRedirect: true, values })
 
     const eventPush = event.target.id;  
     if(eventPush === "A"){
       values = "A"
+      if(localStorage.getItem('A') === null ){
+        localStorage.setItem('A', 1);
+       } else {
+        var aCount = parseInt(localStorage.getItem('A'));
+        localStorage.setItem('A', aCount + 1);
+       }
     } else {
       if(eventPush === "B"){
         values = "B"
+        if(localStorage.getItem('B') === null ){
+          localStorage.setItem('B', 1);
+         } else {
+          var bCount = parseInt(localStorage.getItem('B'));
+          localStorage.setItem('B', bCount + 1);
+         }
     } else {
       if(eventPush === "C"){
         values = "C"
+        if(localStorage.getItem('C') === null ){
+          localStorage.setItem('C', 1);
+         } else {
+          var cCount = parseInt(localStorage.getItem('C'));
+          localStorage.setItem('C', cCount + 1);
+         }
     } else {
       if(eventPush === "D"){
         values = "D"
-    } else {
+        if(localStorage.getItem('D') === null ){
+          localStorage.setItem('D', 1);
+         } else {
+          var dCount = parseInt(localStorage.getItem('D'));
+          localStorage.setItem('D', dCount + 1);
+         }
+
+      } else {
       if(eventPush === "E"){
         values = "E"
+        if(localStorage.getItem('E') === null ){
+          localStorage.setItem('E', 1);
+         } else {
+          var eCount = parseInt(localStorage.getItem('E'));
+          localStorage.setItem('E', eCount + 1);
+         }
       } else {
         if(eventPush === "F"){
           values = "F"
+          if(localStorage.getItem('F') === null ){
+            localStorage.setItem('F', 1);
+           } else {
+            var fCount = parseInt(localStorage.getItem('F'));
+            localStorage.setItem('F', fCount + 1);
+           }
         }
     }
     }
     }
     }
   }
-
   alert(values); 
   
   }
@@ -80,15 +115,9 @@ import { Redirect } from 'react-router'
           </Col>
           </Row>
           </Container>
-          {
-            this.state.values && 
-          <div>
-          <h5 className="text">Submission values</h5>
-          Values: <pre>{
-            JSON.stringify(this.state.values, null, 2)
-            }</pre>
-          </div>
-      }
+        
+                {/*JSON.stringify(this.state.values)*/}
+
         
         {fireRedirect && (<Redirect to={from || '/quiz/q4'}/>
         )}
