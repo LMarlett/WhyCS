@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
-import Header from '../components/headerComponent/header';
+import React, { Component } from 'react'
+import Header from '../components/headerComponent/header'
+import './resources.css'
 
- class About extends Component {
+class About extends Component {
   render() {
     return (
-         <div>
-<Header />
-
-        test homepage
-
-        </div>
-     );
+      <div>
+        <Header />
+        <h3>About</h3>
+      </div>
+    )
   }
 }
 
-export default About;
+export default About

@@ -1,31 +1,34 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins);
 @import url(https://use.fontawesome.com/releases/v5.3.1/css/all.css);
-
+@import url(https://fonts.googleapis.com/css?family=Lato);
 .headerLogo {
-    width: 20%;
-    height: auto;
-    float: left;
+  width: 20%;
+  height: auto;
+  float: left;
+}
+
+.clearfix {
+  padding-top: 30px;
+  padding-left: 15px;
 }
 
 .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: '';
+  clear: both;
+  display: table;
 }
 
 .headerText {
-    font-family: 'Poppins', sans-serif;
-    font-size: 100px;
-    color: #14B3ED;
+  font-family: 'Lato', sans-serif;
+  font-size: 100px;
+  color: #3061ac;
 }
 
 .navbarText {
-     color: #2699FB !important;
-     font-family: 'Poppins', sans-serif !important;
-
+  color: #3061ac !important;
+  font-family: 'Lato', sans-serif !important;
 }
 
-.navbarColor{
-    color: white;
-  
+.navbarColor {
+  color: white;
 }
