@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import '../pages/pages.css';
 import Header from '../components/headerComponent/header';
 import Footer from '../components/footerComponent/footer';
-import '../pages/pages.css';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, NavLink, Button, Row, Col } from 'reactstrap';
 import CategorySquare from '../components/categorySquare';
+import CategoryInformation from '../components/categoryInformation';
+import CategoryBlocksHeader from '../components/categoryBlocksHeader';
 
 //to do get all results from db put into the state map thingy 
 //or a pie graph chart
@@ -24,39 +25,33 @@ import CategorySquare from '../components/categorySquare';
   render() {
     return (
          <div className="resultsWrapper">
+
           <Header />
-          <div className="categoryBlocks_wrapper">
-            <div className="categoryBlock" id="blue">
-              <p>Economic & Workforce Development</p>
-            </div>
-            <div className="categoryBlock" id="green">
-              <p>Citizenship & Civic Engagement</p>
-            </div>
-            <div className="categoryBlock" id="purple">
-              <p>Competencies & Literacies</p>
-            </div>
-            <div className="categoryBlock" id="pink">
-              <p>Technological, Social & Scientific Innovation</p>
-            </div>
-            <div className="categoryBlock" id="red">
-              <p>Equity & Social Justice</p>
-            </div>
-            <div className="categoryBlock" id="orange">
-              <p>School Reform & Improvement</p>
-            </div>
-            <div className="categoryBlock" id="yellow">
-              <p>Personal Agency, Joy & Fulfillment</p>
+
+          <CategoryBlocksHeader />
+
+          <div className="yourResultsWrapper">
+            <div className="yourResultsInner">
+              <h2>Your Results</h2>
+              {/* if else */}
+              <CategorySquare />
             </div>
           </div>
 
-          <div className="yourResults">
-            <h1>Your Results</h1>
-            {/* if else */}
-            <CategorySquare />
+          <div className="resultsChart">
+          <p>Static content goes here</p>
           </div>
-          <NavLink href="/quiz/start">
-            <Button outline color="secondary">Take the Quiz</Button>
-          </NavLink>
+
+          <div className="impactAreas">
+            <h2>Learn More About Impact Areas</h2>
+          {/* <NavLink href="#">
+            <Button outline color="secondary">Learn More About Impact Areas</Button>
+          </NavLink> */}
+          </div>
+
+          <div>
+            <CategoryInformation />
+          </div>
 
           <Footer />
         </div>

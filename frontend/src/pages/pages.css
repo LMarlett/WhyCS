@@ -111,6 +111,8 @@
 .resultsWrapper {
     width: 80%;
     margin: auto;
+    color: #55B5F4;
+    text-align: center;
 }
 .categoryBlocks_wrapper {
     width: 1050px;
@@ -137,11 +139,27 @@
 #orange {background-color: #D98B3F}
 #yellow {background-color: #EFC13D}
 
-.yourResults {
-    clear: both;
-    margin-top: 30px;
+.yourResultsWrapper, .resultsChart {
+    margin: 50px 0px;
+    width: 45%;
+    float:left;
 }
-.yourResults h1 {
+.yourResultsInner {
+    width: 450px;
+    margin: auto;
+}
+.impactAreas {
+    clear: both;
+    text-align: center;
+}
+
+/* ===== Category Information Component */
+.categoryInfoWrapper {
+    margin-top: 50px;
+}
+.category h3 {
+    text-align: left;
+    font-size: 20px;
 }
 
 
