@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../pages/pages.css';
 import Header from '../components/headerComponent/header';
+import Footer from '../components/footerComponent/footer';
 import { Card,CardImg,CardText,CardBody,CardTitle,CardSubtitle, NavLink,FormGroup,Label,Input,Button,Row,Col,Container } from 'reactstrap';
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
 import { Redirect } from 'react-router'
@@ -37,15 +38,11 @@ class QuizStart extends Component {
       <Row>
       <Col Col sm="12" md={{ size: 8, offset: 2 }}>
       <Card body className="text-center" inverse style={{borderColor: 'white' }}> 
-        <CardTitle><div className="thirdText">WhyCS Quiz</div></CardTitle>
-        <br/>
+        <CardTitle><div className="homePhrase">WhyCS Quiz</div></CardTitle>
         <CardText>
-          <div className="textCenter">Lorem ipsum dolor sit amet, consectetur 
-             adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-           veniam, quiepakis nostrud exercitation ullamco laboris nsi ut aliquip ex 
-           ea comepmodo consetquat.    
+          <div className="homeQuote">
+            Fill out the form below to start the quiz. 
           </div>
-          <div className="textCenter">Select a choice that means more to you</div>
         </CardText>
         <br/>
        
@@ -86,7 +83,7 @@ class QuizStart extends Component {
             <option>55+</option>
             </AvField>
 
-          <Button className='btn' outline color="secondary">Start Quiz</Button>      
+          <Button className='homeButton' outline color="secondary">Start Quiz</Button>      
  
         </AvForm>
         
@@ -142,7 +139,7 @@ class QuizStart extends Component {
 */}
 
     
-
+  <Footer />
   </div>
   );
   }

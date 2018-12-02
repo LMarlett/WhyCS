@@ -46,7 +46,6 @@ class Header extends Component {
         <div>
           <Navbar color="navbarColor" light expand="md">
             <NavbarBrand href="/" className="navbarText">
-              WhyCS
             </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
@@ -55,7 +54,7 @@ class Header extends Component {
                   <NavLink href="/home">Home</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/about">About</NavLink>
+                  <NavLink href="/about">About WhyCS</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/quiz/start">Take the Quiz</NavLink>
