@@ -33,8 +33,7 @@ class Footer extends Component {
   render() {
     return (
 <div>
-<footer>
-<div className="footerText">WhyCS</div>  
+<footer>  
 <div>
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">WhyCS</NavbarBrand>
