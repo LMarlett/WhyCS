@@ -1,0 +1,20 @@
+blockquote {
+  background: #eee;
+  border-radius: 5px;
+}
+
+blockquote p {
+  padding: 15px;
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
+
+.pageTitle {
+  color: #36b8f8;
+}
