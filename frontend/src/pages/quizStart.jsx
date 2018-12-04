@@ -40,13 +40,13 @@ class QuizStart extends Component {
   }
 
   handleValidSubmit(event, values) {
-    event.preventDefault()
-    this.setState({
-      fireRedirect: true,
-      values
-    })
-    localStorage.setItem('inputs', JSON.stringify(values))
-  }
+     event.preventDefault()
+    this.setState({ 
+      fireRedirect: true, values })
+    localStorage.setItem('inputs', JSON.stringify(values));
+       }
+ 
+
 
   render() {
     const { from } = this.props.location.state || '/'
@@ -55,104 +55,74 @@ class QuizStart extends Component {
 
     return (
       <div>
-        <Header />
-        <br />
-        <br />
-        <Row>
-          <Col Col sm="12" md={{ size: 8, offset: 2 }}>
-            <Card
-              body
-              className="text-center"
-              inverse
-              style={{ borderColor: 'white' }}
-            >
-              <CardTitle>
-                <div className="thirdText">
-                  <h3>WhyCS Quiz</h3>
-                </div>
-              </CardTitle>
-              <br />
-              <CardText>
-                <div className="textCenter">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quiepakis nostrud exercitation
-                  ullamco laboris nsi ut aliquip ex ea comepmodo consetquat.
-                </div>
-                <div className="textCenter">
-                  Select a choice that means more to you
-                </div>
-              </CardText>
-              <br />
+      <Header />
+      <br/><br/>
+      <Row>
+      <Col Col sm="12" md={{ size: 8, offset: 2 }}>
+      <Card body className="text-center" inverse style={{borderColor: 'white' }}> 
+        <CardTitle><div className="thirdText">WhyCS Quiz</div></CardTitle>
+        <br/>
+        <CardText>
+          <div className="textCenter">Lorem ipsum dolor sit amet, consectetur 
+             adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+           veniam, quiepakis nostrud exercitation ullamco laboris nsi ut aliquip ex 
+           ea comepmodo consetquat.    
+          </div>
+          <div className="textCenter">Select a choice that means more to you</div>
+        </CardText>
+        <br/>
+       
 
-              <Row>
-                <Col Col sm="12" md={{ size: 6, offset: 3 }}>
-                  <AvForm
-                    className="text-form"
-                    onValidSubmit={this.handleValidSubmit}
-                  >
-                    <AvField
-                      className="intake-form"
-                      name="zip"
-                      label="Zip"
-                      type="number"
-                      placeHolder="00000"
-                      validate={{
-                        number: true,
-                        minLength: { value: 5 },
-                        maxLength: { value: 5 },
-                        required: { value: true }
-                      }}
-                    />
-                    <AvField
-                      className="intake-form"
-                      name="career"
-                      label="Career Field"
-                      type="text"
-                      errorMessage="Please enter your career type"
-                      validate={{
-                        required: { value: true },
-                        pattern: { value: '^[A-Za-z0-9]+$' },
-                        minLength: { value: 3 },
-                        maxLength: { value: 25 }
-                      }}
-                    />
+      <Row> 
+      <Col sm="12" md={{ size: 6, offset: 3 }}>
+      <AvForm className="text-form" onValidSubmit={this.handleValidSubmit}>
+ 
+             <AvField className="intake-form" name="zip" label="Zip" type="number"  placeHolder="00000" 
+             validate={{
+               number: true,
+               minLength: {value: 5},
+               maxLength: {value: 5},
+               required: {value: true},
 
-                    <Label>Gender</Label>
-                    <AvRadioGroup
-                      className="text"
-                      inline
-                      name="gender"
-                      required
-                    >
-                      <AvRadio label="Female" value="female" />
-                      <AvRadio label="Male" value="male" />
-                      <AvRadio label="Other" value="other" />
-                    </AvRadioGroup>
+              }}/>
 
-                    <AvField
-                      type="select"
-                      className="intake-form"
-                      name="select"
-                      label="Age Range"
-                      helpMessage="Please select an age group"
-                    >
-                      <option>18 or less</option>
-                      <option>19-25</option>
-                      <option>26-35</option>
-                      <option>36-45</option>
-                      <option>46-55</option>
-                      <option>55+</option>
-                    </AvField>
+             <AvField className="intake-form" name="career" label="Career Field" type="text"  errorMessage="Please enter your career type" 
+             validate={{
+            required: {value: true},
+            pattern: {value: '^[A-Za-z0-9]+$'},
+            minLength: {value: 3},
+            maxLength: {value: 25}
+          }} />
 
-                    <Button className="btn" outline color="secondary">
-                      Start Quiz
-                    </Button>
-                  </AvForm>
-                </Col>
-              </Row>
-            </Card>
-          </Col>
+            <Label>Gender</Label>
+           <AvRadioGroup className="text" inline name="gender"  required>
+            <AvRadio label="Female" value="female" />
+            <AvRadio label="Male" value="male" />
+            <AvRadio label="Other" value="other" />
+          </AvRadioGroup>
+
+            <AvField type="select" className="intake-form"  name="ageRange" label="Age Range" validate={{
+            required: {value: true}}} helpMessage="Please select an age group">
+           
+            <option>Select</option>
+
+            <option>18 or less</option>
+            <option>19-25</option>
+            <option>26-35</option>
+            <option>36-45</option>
+            <option>46-55</option>
+            <option>55+</option>
+            </AvField>
+
+          <Button className='btn' outline color="secondary">Start Quiz</Button>      
+ 
+        </AvForm>
+        
+        </Col>
+        </Row>
+
+        </Card>
+        </Col>
         </Row>
 
         {/*JSON.stringify(this.state.values)*/}

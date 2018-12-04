@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+
 import Header from '../headerComponent/header';
 import './questions.css';
 import { Card,CardImg,CardText,CardBody,CardTitle,CardSubtitle, NavLink,FormGroup,Label,Input,Button,Row,Col,Container } from 'reactstrap';
 import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
-import { Redirect } from 'react-router'
-
+import { Redirect } from 'react-router';
+import _ from 'lodash';
+import tuples from '../../api/touples';
+import quizQuestions from '../../api/csQuestions';
 
  class Q1 extends Component {
 
@@ -13,7 +16,15 @@ import { Redirect } from 'react-router'
 
     this.handleValidSubmit = this.handleValidSubmit.bind(this);
     this.state = {      
-      fireRedirect: false
+      fireRedirect: false,
+      qA: '',
+      qB: '',
+      qAid: '',
+      qBid: '',
+      qAcat: '',
+      qBcat: ''
+
+ 
     };
   }
 
@@ -21,15 +32,23 @@ import { Redirect } from 'react-router'
 
     event.preventDefault()
     this.setState({ fireRedirect: true, values })
+    const idA = this.state.qAid;
+    const idB = this.state.qBid;
 
     const eventPush = event.target.id;  
-    if(eventPush === "A"){
-      values = "A"
-      if(localStorage.getItem('A') === null ){
-        localStorage.setItem('A', 1);
+    
+    if(eventPush === "EWD"){
+      values = "EWD"
+      if(localStorage.getItem('EWD') === null ){
+        localStorage.setItem('EWD', 1);
+        localStorage.setItem('q1Chosen', idA);
+        localStorage.setItem('q1Rejected', idB);
        } else {
-        var aCount = parseInt(localStorage.getItem('A'));
-        localStorage.setItem('A', aCount + 1);
+        var aCount = parseInt(localStorage.getItem('EWD'));
+        localStorage.setItem('EWD', aCount + 1);
+        localStorage.setItem('q1Chosen', idA);
+        localStorage.setItem('q1Rejected', idB);
+
        }
     } else {
       if(eventPush === "B"){
@@ -84,10 +103,46 @@ import { Redirect } from 'react-router'
     }
   }
 
-  alert(values); 
+  alert(values + idA); 
   
+
+
+ 
   }
  
+  componentWillMount() {
+    const Q11 = tuples[0][0][0].qText;
+    const Q11ID = tuples[0][0][0].catID;
+
+    const printQ12 = tuples[0][1][0].qText;
+    const printQ12ID = tuples[0][1][0].catID;
+
+     alert(Q11 + Q11ID + printQ12 + printQ12ID);
+    const shuffledQ = _.shuffle(quizQuestions[0].questions);
+   //alert(shuffledQ[0].qText);
+    
+   
+       
+    this.setState({
+       qA: tuples[0][0][0].qText,
+      qAcat: tuples[0][0][0].catID,
+        qAid: tuples[0][0][0].qID,
+        qB: tuples[0][1][0].qText,
+        qBcat: tuples[0][1][0].catID,
+          qBid: tuples[0][1][0].qID
+          
+     });
+// alert(this.state.answerOptions);
+  }
+
+ 
+  
+
+ 
+
+  
+
+
   render() {
 
     const { from } = this.props.location.state || '/'
@@ -107,11 +162,9 @@ import { Redirect } from 'react-router'
       
            <AvForm className="text-form" >
  
-           <Button className='quizbtnL' onClick={this.handleValidSubmit} outline color="secondary" id="A">Lorem ipsum dolor sit amet, consectetur 
-             adipisicing elit, sed do eiusmod tempor incididunt ut labore (A)</Button>      
- 
-           <Button className='quizbtnR btn' onClick={this.handleValidSubmit} outline color="secondary"id="C">Lorem ipsum dolor sit amet, consectetur 
-             adipisicing elit, sed do eiusmod tempor incididunt ut labore (C)</Button>      
+           <Button className='quizbtnL' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA + this.state.qAid}</Button>      
+           
+           <Button className='quizbtnR btn' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB + this.state.qBid}</Button>      
 
           </AvForm>
           </Col>
@@ -119,10 +172,9 @@ import { Redirect } from 'react-router'
           </Container>
           
               {/*JSON.stringify(this.state.values)*/}
-
-        
-        {fireRedirect && (<Redirect to={from || '/quiz/q2'}/>
-        )}
+         
+        {/* {fireRedirect && (<Redirect to={from || '/quiz/q2'}/>
+        )} */}
         
 </div>
       );
