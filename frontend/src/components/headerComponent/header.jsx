@@ -43,7 +43,7 @@ class Header extends Component {
           </div>
         </header>
 
-        <div>
+        <div class="navContainer">
           <Navbar color="navbarColor" light expand="md">
             <NavbarBrand href="/" className="navbarText">
               WhyCS
