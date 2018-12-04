@@ -36,13 +36,10 @@ class Home extends Component {
          <div>
       <Header />
       
-      <div className='homePad'>
+      <div className='homePage'>
       <Row>
       <Col sm="6" >
-       <img src={blackboard} className="homeGraphic" alt="WhyCS Logo" />
-
-  
-     
+       <img src={blackboard} className="homeGraphic" alt="WhyCS Blackboard Drawing" />
       </Col>
       <Col sm="6">
       <Card body className="homeTextWrapper" inverse> 
@@ -58,7 +55,7 @@ class Home extends Component {
           </div>
         </CardText>
 
-        <NavLink href="/quiz/start">
+        <NavLink href="/quiz/start" className="buttonWrapper">
         <Button outline color="secondary" className="homeButton">Take the Quiz</Button>
         </NavLink>
         <CardText>

@@ -82,9 +82,9 @@ class QuizStart extends Component {
             <option>46-55</option>
             <option>55+</option>
             </AvField>
-
+          <div className="buttonWrapper">
           <Button className='homeButton' outline color="secondary">Start Quiz</Button>      
- 
+          </div>
         </AvForm>
         
         </Col>

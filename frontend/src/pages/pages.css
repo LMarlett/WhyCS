@@ -17,8 +17,13 @@
 */
 
 /* ========== Home Styles ============ */
+.homePage {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
 .homeTextWrapper {
-    padding: 20px 50px !important;
+    /* padding: 20px 50px !important; */
     border: none !important;
 }
 .homePhrase {
@@ -44,8 +49,11 @@
     text-align: right;
 }
 .homeGraphic {
-  width: 90%;
+  width: 100%;
   height: auto;
+}
+.buttonWrapper {
+    text-align: center;
 }
 .homeButton {
     padding: 5px 40px !important;
@@ -59,6 +67,22 @@
     color: #2A5AB2 !important;
     background: white !important;
 }
+/* home responsiveness */
+@media only screen and (max-width: 1024px) {
+    .homePage {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .homeCTA {
+      font-size: 40px;
+    }
+  }
+  @media only screen and (max-width: 425px) {
+      .homePage {
+          margin-top: 20px;
+      }
+  }
 /* ========== QUIZ START PAGE =========== */
 
 /* ======= SURVEY INTAKE FORM STYLES ======= */
@@ -101,19 +125,21 @@
 .intake-form .radio:first-child {
   margin-left: 5px;
 }
+.intake-form div {
+    margin: 20px 0px;
+}
 /* responsiveness of intake form */
 @media only screen and (max-width: 1001px) {
   .intake-form .radio {
     width: 20%;
   }
 }
-.intake-form div {
-     margin: 20px 0px;
-}
+
 /* ========= Results Page ========= */
 .resultsWrapper {
     width: 80%;
     margin: auto;
+    margin-top: 50px;
     color: #2A5AB2;
     text-align: center;
 }
@@ -133,7 +159,13 @@
     clear: both;
     text-align: center;
 }
-@media only screen and (max-width: 715px) { 
+.impactAreas h2 {
+    margin-bottom: -20px;
+}
+@media only screen and (max-width: 768px) {
+    .resultsWrapper {
+        width: 100%;
+    } 
     .yourResultsWrapper, .resultsChart {
         float: none;
         width: 100%;
@@ -218,10 +250,12 @@
         width: 300px;
     }
 }
-@media only screen and (max-width: 795px) {
+@media only screen and (max-width: 769px) {
     .categoryBlocks_wrapper {
-        width: 70%;
-    }
+        width: 700px;
+        margin: auto;
+        height: 120px;
+    }   
     .categoryBlock {
         width: 100px;
         height: 100px;
@@ -229,17 +263,49 @@
     }
     .categoryBlock p {
         font-size: 12px;
-    }
-  }
-  @media only screen and (max-width: 545px) {
+    } 
+}
+@media only screen and (max-width: 425px) { 
     .categoryBlocks_wrapper {
-        width: 90%;
+        width: auto;
+        height: 200px;
+    }
+    .categoryBlock {
+        width: 106px;
+        height: 105px;
+        padding: 15px 10px;
+    }
+    .yourResultsInner {
+        width: 318px;
+    }
+}
+@media only screen and (max-width: 375px) { 
+    .categoryBlock {
+        width: 93px;
+        height: 93px;
+    }
+    .yourResultsInner {
+        width: 279px;
+    }
+}
+@media only screen and (max-width: 320px) { 
+    .categoryBlock {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+    }
+    .categoryBlock p {
+        font-size: 11px;
+    }
+    .yourResultsInner {
+        width: 240px;
     }
 }
 /* ========= About Page & Results Page Category Descriptions ========== */
 .aboutWrapper, .categoryInfoWrapper, .resources {
     width: 70%;
     margin: auto;
+    margin-top: 50px;
     color: grey;
     font-family: 'Lato', sans-serif;
 }
@@ -265,5 +331,11 @@
     background-color: #2A5AB2;
     margin: 30px 0px;
 }
+@media only screen and (max-width: 375px) { 
+    .aboutWrapper, .categoryInfoWrapper, .resources {
+        width: 80%;
+    }
+}
+
 
 

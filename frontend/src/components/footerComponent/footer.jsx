@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-   
- import '../../App.css'
- import 'bootstrap/dist/css/bootstrap.css';
- import {
+import '../../App.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import {
   Collapse,
   Navbar,
   NavbarToggler,
@@ -14,7 +13,7 @@ import React, { Component } from 'react';
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
-
+import whycsLogo from '../../images/WhyCS-Logo.svg'
 
 class Footer extends Component {
   constructor(props) {
@@ -36,10 +35,11 @@ class Footer extends Component {
 <footer>  
 <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">WhyCS</NavbarBrand>
+          <NavbarBrand href="/"><NavLink href="/"><img src={whycsLogo} className="headerLogo" alt="WhyCS Logo" /></NavLink></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+              
               <NavItem>
                 <NavLink href="/">Home</NavLink>
               </NavItem>
@@ -50,7 +50,7 @@ class Footer extends Component {
                 <NavLink href="/startwhycsquiz">Take the Quiz</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/resources">Resources</NavLink>
+                <NavLink href="/resources">Unplugged Resources</NavLink>
               </NavItem>
            
             </Nav>

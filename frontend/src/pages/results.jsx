@@ -24,10 +24,10 @@ import CategoryBlocksHeader from '../components/categoryBlocksHeader';
   }
   render() {
     return (
-         <div className="resultsWrapper">
+         <div>
 
           <Header />
-
+          <div className="resultsWrapper">
           <CategoryBlocksHeader />
 
           <div className="yourResultsWrapper">
@@ -44,7 +44,6 @@ import CategoryBlocksHeader from '../components/categoryBlocksHeader';
 
           <div className="impactAreas">
             <h2>Learn More About Impact Areas</h2>
-            <br/>
           {/* <NavLink href="#">
             <Button outline color="secondary">Learn More About Impact Areas</Button>
           </NavLink> */}
@@ -53,7 +52,7 @@ import CategoryBlocksHeader from '../components/categoryBlocksHeader';
           <div>
             <CategoryInformation />
           </div>
-
+          </div>
           <Footer />
         </div>
      );
