@@ -21,8 +21,9 @@ class QuizStart extends Component {
     this.setState({ 
       fireRedirect: true, values })
     localStorage.setItem('inputs', JSON.stringify(values));
-
+ 
    }
+
  
 
 
@@ -38,17 +39,19 @@ class QuizStart extends Component {
       <Row>
       <Col Col sm="12" md={{ size: 8, offset: 2 }}>
       <Card body className="text-center" inverse style={{borderColor: 'white' }}> 
-        <CardTitle><div className="homePhrase">WhyCS Quiz</div></CardTitle>
+         <CardTitle><div className="homePhrase">WhyCS Quiz</div></CardTitle>
         <CardText>
           <div className="homeQuote">
             Fill out the form below to start the quiz. 
           </div>
+ 
         </CardText>
         <br/>
        
 
       <Row> 
-      <Col Col sm="12" md={{ size: 6, offset: 3 }}>
+       <Col Col sm="12" md={{ size: 6, offset: 3 }}>
+ 
       <AvForm className="text-form" onValidSubmit={this.handleValidSubmit}>
  
              <AvField className="intake-form" name="zip" label="Zip" type="number"  placeHolder="00000" 
@@ -59,6 +62,7 @@ class QuizStart extends Component {
                required: {value: true},
 
               }}/>
+ 
              <AvField className="intake-form" name="career" label="Career Field" type="text"  errorMessage="Please enter your career type" 
              validate={{
             required: {value: true},
@@ -74,7 +78,12 @@ class QuizStart extends Component {
             <AvRadio label="Other" value="other" />
           </AvRadioGroup>
 
-            <AvField type="select" className="intake-form"  name="select" label="Age Range" helpMessage="Please select an age group">
+ 
+            <AvField type="select" className="intake-form"  name="ageRange" label="Age Range" validate={{
+            required: {value: true}}} helpMessage="Please select an age group">
+           
+            <option>Select</option>
+ 
             <option>18 or less</option>
             <option>19-25</option>
             <option>26-35</option>
@@ -82,13 +91,18 @@ class QuizStart extends Component {
             <option>46-55</option>
             <option>55+</option>
             </AvField>
-          <div className="buttonWrapper">
-          <Button className='homeButton' outline color="secondary">Start Quiz</Button>      
-          </div>
+ 
+
+          <Button className='btn' outline color="secondary">Start Quiz</Button>      
+ 
         </AvForm>
         
         </Col>
         </Row>
+
+        </Card>
+        </Col>
+         </Row>
         
       </Card>
      </Col>
