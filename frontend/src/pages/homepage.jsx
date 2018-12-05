@@ -1,92 +1,78 @@
-import React, { Component } from 'react'
-import Header from '../components/headerComponent/header'
-import Footer from '../components/footerComponent/footer'
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  NavLink,
-  Button,
-  Row,
-  Col
-} from 'reactstrap'
-import '../pages/pages.css'
-import big from '../images/large.png'
+import React, { Component } from 'react';
+import Header from '../components/headerComponent/header';
+import Footer from '../components/footerComponent/footer';
+import { 
+   Card,
+   CardImg, 
+   CardText, 
+   CardBody,
+   CardTitle, 
+   CardSubtitle, 
+   NavLink,
+Button,
+Row,
+Col 
+} from 'reactstrap';
+import '../pages/pages.css';
+import big from '../images/large.png';
+import blackboard from '../images/whycs_blackboard.jpeg';
 
 class Home extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.toggle = this.toggle.bind(this)
+    this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false
-    }
+    };
   }
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
-    })
+    });
   }
   render() {
     return (
-      <div>
-        <Header />
+         <div>
+      <Header />
+      
+      <div className='homePage'>
+      <Row>
+      <Col sm="6" >
+       <img src={blackboard} className="homeGraphic" alt="WhyCS Blackboard Drawing" />
+      </Col>
+      <Col sm="6">
+      <Card body className="homeTextWrapper" inverse> 
+        <CardTitle>
+          <div className="homePhrase">
+            There are lots of reasons that people think computer science education is important. 
+          </div>
+        </CardTitle>
 
-        <div className="homePad">
-          <Row>
-            <Col sm="6">
-              <img src={big} className="homeGraphic" alt="WhyCS Logo" />
-            </Col>
-            <Col sm="6">
-              <Card
-                body
-                className="text-center"
-                inverse
-                style={{ borderColor: 'white' }}
-              >
-                <CardTitle>
-                  <div className="titleText">WhyCS?</div>
-                </CardTitle>
-                <CardText>
-                  <div className="secondText">
-                    Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt
-                  </div>
-                  <br />
-                  <div className="text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quiepakis nostrud
-                    exercitation ullamco laboris nsi ut aliquip ex ea comepmodo
-                    consetquat.
-                    <br /> <br />
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium poeyi doloremque laudantium, totam
-                    rem aperiam, eaque ipsa quae apsb illo inventore veritatis
-                    et quasi architecto beiatae vitae dicta sunt explicabo. Nemo
-                    enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                    aut fugit, sed quia consequuntur magni dolores eos qui
-                    ratione voluptatem sequi nesciunt.{' '}
-                  </div>
-                </CardText>
-                <br />
+        <CardText>
+          <div className="homeCTA">
+            What are yours?
+          </div>
+        </CardText>
 
-                <NavLink href="/quiz/start">
-                  <Button outline color="secondary">
-                    Take the Quiz
-                  </Button>
-                </NavLink>
-              </Card>
-            </Col>
-          </Row>
+        <NavLink href="/quiz/start" className="buttonWrapper">
+        <Button outline color="secondary" className="homeButton">Take the Quiz</Button>
+        </NavLink>
+        <CardText>
+          <div className="homeQuote">
+            <p>“Educational plans and projects must have a philosophy... otherwise they are at the mercy of every intellectual breeze that happens to blow."</p>				
+            <p className="quoteAuthor">- John Dewey, 1938</p>
+          </div>
+        </CardText>
+      </Card>
+
+          </Col>
+    </Row>
+    </div>
+      <Footer />
         </div>
-        <Footer />
-      </div>
-    )
+     );
   }
 }
 
-export default Home
+export default Home;

@@ -15,9 +15,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap'
-
 import './header.css'
-import small from '../../images/small.png'
 import whycsLogo from '../../images/WhyCS-Logo.svg'
 
 class Header extends Component {
@@ -39,14 +37,10 @@ class Header extends Component {
       <div>
         <header>
           <div className="clearfix">
-            <img src={whycsLogo} className="headerLogo" alt="WhyCS Logo" />
-          </div>
-        </header>
-
-        <div class="navContainer">
+          <NavLink href="/home"><img src={whycsLogo} className="headerLogo" alt="WhyCS Logo" /></NavLink>
+            <div>
           <Navbar color="navbarColor" light expand="md">
             <NavbarBrand href="/" className="navbarText">
-              WhyCS
             </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
@@ -54,19 +48,26 @@ class Header extends Component {
                 <NavItem>
                   <NavLink href="/home">Home</NavLink>
                 </NavItem>
+                <p>•</p>
                 <NavItem>
                   <NavLink href="/about">About</NavLink>
                 </NavItem>
+                <p>•</p>
                 <NavItem>
                   <NavLink href="/quiz/start">Take the Quiz</NavLink>
                 </NavItem>
+                <p>•</p>
                 <NavItem>
-                  <NavLink href="/resources">Resources</NavLink>
+                  <NavLink href="/resources">Unplugged Resources</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
           </Navbar>
         </div>
+          </div>
+        </header>
+
+        
       </div>
     )
   }
