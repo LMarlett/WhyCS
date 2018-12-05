@@ -36,7 +36,9 @@ class QuizStart extends Component {
     this.handleValidSubmit = this.handleValidSubmit.bind(this)
     this.state = {
       fireRedirect: false
-    }
+    } 
+    //clear local storage
+    localStorage.clear();
   }
 
   handleValidSubmit(event, values) {

@@ -33,7 +33,11 @@ import CategoryBlocksHeader from '../components/categoryBlocksHeader';
           <div className="yourResultsWrapper">
             <div className="yourResultsInner">
               <h2>Your Results</h2>
-              {/* if else */}
+              {/* if else
+              
+              sort the key value pairs take the first three
+              
+              */}
               <CategorySquare />
             </div>
           </div>

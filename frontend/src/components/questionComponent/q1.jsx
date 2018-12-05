@@ -26,8 +26,7 @@ import quizQuestions from '../../api/csQuestions';
 
  
     };
-      //clear local storage
-      localStorage.clear();
+      
   }
 
   handleValidSubmit(event, values) {
