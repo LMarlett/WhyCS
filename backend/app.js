@@ -5,10 +5,12 @@ const models = require('./models');
 
 // This will be our application entry. We'll setup our server here.
 const http = require('http');
+
+var cors = require('cors');
 const PORT = process.env.PORT || 8000;
 
 const app = express();
-
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
