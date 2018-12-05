@@ -9,7 +9,7 @@ import tuples from '../../api/touples';
 import quizQuestions from '../../api/csQuestions';
  import '../../pages/pages.css';
 
- class Q3 extends Component {
+ class Q11 extends Component {
   
   constructor(props) {
     super(props);
@@ -156,13 +156,13 @@ import quizQuestions from '../../api/csQuestions';
    
        
     this.setState({
-       qA: tuples[2][0][0].qText,
-       qAcat: tuples[2][0][0].catID,
-       qAid: tuples[2][0][0].qID,
+       qA: tuples[10][0][0].qText,
+       qAcat: tuples[10][0][0].catID,
+       qAid: tuples[10][0][0].qID,
 
-       qB: tuples[2][1][0].qText,
-       qBcat: tuples[2][1][0].catID,
-       qBid: tuples[2][1][0].qID
+       qB: tuples[10][1][0].qText,
+       qBcat: tuples[10][1][0].catID,
+       qBid: tuples[10][1][0].qID
           
      });
 // alert(this.state.answerOptions);
@@ -206,11 +206,11 @@ import quizQuestions from '../../api/csQuestions';
           </Row>
           </Container>
 
-        {fireRedirect && (<Redirect to={from || '/quiz/q4'}/>
+        {fireRedirect && (<Redirect to={from || '/quiz/q12'}/>
         )}
 </div>
       );
   }
 }
 
-export default Q3;
+export default Q11;

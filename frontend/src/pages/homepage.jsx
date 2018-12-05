@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
-import Header from '../components/headerComponent/header';
-import Footer from '../components/footerComponent/footer';
-import { 
-   Card,
-   CardImg, 
-   CardText, 
-   CardBody,
-   CardTitle, 
-   CardSubtitle, 
-   NavLink,
-Button,
-Row,
-Col 
-} from 'reactstrap';
+import React, { Component } from 'react'
+import Header from '../components/headerComponent/header'
+import Footer from '../components/footerComponent/footer'
+
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  NavLink,
+  Button,
+  Row,
+  Col
+} from 'reactstrap'
 import '../pages/pages.css';
 import big from '../images/large.png';
 import blackboard from '../images/whycs_blackboard.jpeg';
@@ -33,7 +34,7 @@ class Home extends Component {
   }
   render() {
     return (
-         <div>
+      <div>
       <Header />
       
       <div className='homePage'>
@@ -71,6 +72,7 @@ class Home extends Component {
     </div>
       <Footer />
         </div>
+        
      );
   }
 }

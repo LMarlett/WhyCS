@@ -41,6 +41,7 @@ import CategoryBlocksHeader from '../components/categoryBlocksHeader';
           <div className="resultsChart">
           <p>Static content goes here</p>
           </div>
+ 
 
           <div className="impactAreas">
             <h2>Learn More About Impact Areas</h2>
@@ -54,6 +55,7 @@ import CategoryBlocksHeader from '../components/categoryBlocksHeader';
           </div>
           </div>
           <Footer />
+ 
         </div>
      );
   }

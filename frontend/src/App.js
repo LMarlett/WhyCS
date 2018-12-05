@@ -25,6 +25,19 @@ import Q7 from './components/questionComponent/q7';
 import Q8 from './components/questionComponent/q8';
 import Q9 from './components/questionComponent/q9';
 import Q10 from './components/questionComponent/q10';
+import Q11 from './components/questionComponent/q11';
+import Q12 from './components/questionComponent/q12';
+import Q13 from './components/questionComponent/q13';
+import Q14 from './components/questionComponent/q14';
+import Q15 from './components/questionComponent/q15';
+import Q16 from './components/questionComponent/q16';
+import Q17 from './components/questionComponent/q17';
+import Q18 from './components/questionComponent/q18';
+import Q19 from './components/questionComponent/q19';
+import Q20 from './components/questionComponent/q20';
+import Q21 from './components/questionComponent/q21';
+
+
 
 import Quiz from './components/questionComponent/quiz'
 
@@ -59,6 +72,17 @@ class App extends Component {
           <Route path='/quiz/q8' component={Q8} />
           <Route path='/quiz/q9' component={Q9} />
           <Route path='/quiz/q10' component={Q10} />
+          <Route path='/quiz/q11' component={Q11} />
+          <Route path='/quiz/q12' component={Q12} />
+          <Route path='/quiz/q13' component={Q13} />
+          <Route path='/quiz/q14' component={Q14} />
+          <Route path='/quiz/q15' component={Q15} />
+          <Route path='/quiz/q16' component={Q16} />
+          <Route path='/quiz/q17' component={Q17} />
+          <Route path='/quiz/q18' component={Q18} />
+          <Route path='/quiz/q19' component={Q19} />
+          <Route path='/quiz/q20' component={Q20} />
+          <Route path='/quiz/q21' component={Q21} />
 
           <Route component={Error} />
           </Switch>

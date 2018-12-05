@@ -1,12 +1,17 @@
-import React, { Component } from 'react';
-import Header from '../components/headerComponent/header';
-import './pages.css'
 
+import React, { Component } from 'react'
+import Header from '../components/headerComponent/header'
+import Footer from '../components/footerComponent/footer'
+import './about.css'
+import {Container, Row, Col} from 'reactstrap'
+ 
 class About extends Component {
   render() {
     return (
       <div>
         <Header />
+ 
+
         <div className="aboutWrapper">
         <h3>About WhyCS</h3>
         <p>We created WhyCS to highlight the importance of core values when it comes to computer science education. Different reasons for teaching computer science aren’t just important so that we can get other people to care about CS, they should also shape what our computer science classes look like - who’s in them, what kinds of things get taught and in what ways. Our values should be expressed in our practice.
@@ -24,6 +29,11 @@ class About extends Component {
         </ul>
         <p>CSforALL was founded in 2013 as CSNYC — the New York City Foundation for Computer Science Education — with a mission to bring CS to all 1.1 million students in the NYC public school system. Our early efforts to build community support and funding for CS in local public schools led to the 2015 launch of a 10-year “Computer Science for All” initiative in partnership with the city that will reach every student by 2025. In 2018, CSNYC became CSforALL to steward the national movement and support local change efforts like New York City’s across the country.</p>
         </div>
+
+
+
+        <Footer />
+ 
       </div>
     )
   }

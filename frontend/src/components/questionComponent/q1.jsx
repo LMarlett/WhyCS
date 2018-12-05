@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Header from '../headerComponent/header';
 import './questions.css';
 import { Card,CardImg,CardText,CardBody,CardTitle,CardSubtitle, NavLink,FormGroup,Label,Input,Button,Row,Col,Container } from 'reactstrap';
@@ -8,6 +7,7 @@ import { Redirect } from 'react-router';
 import _ from 'lodash';
 import tuples from '../../api/touples';
 import quizQuestions from '../../api/csQuestions';
+ import '../../pages/pages.css';
 
  class Q1 extends Component {
 
@@ -26,6 +26,8 @@ import quizQuestions from '../../api/csQuestions';
 
  
     };
+      //clear local storage
+      localStorage.clear();
   }
 
   handleValidSubmit(event, values) {
@@ -36,74 +38,106 @@ import quizQuestions from '../../api/csQuestions';
     const idB = this.state.qBid;
 
     const eventPush = event.target.id;  
-    
+    const chosen = event.target.name;
+
+
+    //record the chosen button and the rejected button
+  if(localStorage.getItem('chosenRejected' === null)){
+      if (chosen === 'A')
+        {
+          localStorage.setItem('chosenRejected', idA + idB);
+      
+        } else {
+           localStorage.setItem('chosenRejected', idB + idA);
+        }
+     } else {
+
+      if (chosen === 'A')
+      {
+         var chosenPreviousA = localStorage.getItem('chosenRejected');
+         localStorage.setItem('chosenRejected', chosenPreviousA + ','  + idA + idB);
+      } else {
+        var chosenPreviousB = localStorage.getItem('chosenRejected');
+
+           localStorage.setItem('chosenRejected', chosenPreviousB + ',' + idB + idA);
+  }
+}
+
+    // add up the chosen categories
+
     if(eventPush === "EWD"){
       values = "EWD"
       if(localStorage.getItem('EWD') === null ){
         localStorage.setItem('EWD', 1);
-        localStorage.setItem('q1Chosen', idA);
-        localStorage.setItem('q1Rejected', idB);
        } else {
         var aCount = parseInt(localStorage.getItem('EWD'));
         localStorage.setItem('EWD', aCount + 1);
-        localStorage.setItem('q1Chosen', idA);
-        localStorage.setItem('q1Rejected', idB);
-
        }
-    } else {
-      if(eventPush === "B"){
-        values = "B"
-        if(localStorage.getItem('B') === null ){
-          localStorage.setItem('B', 1);
+      } else {
+      if(eventPush === "ESJ"){
+        values = "ESJ"
+        if(localStorage.getItem('ESJ') === null ){
+          localStorage.setItem('ESJ', 1);
          } else {
-          var bCount = parseInt(localStorage.getItem('B'));
-          localStorage.setItem('B', bCount + 1);
+          var bCount = parseInt(localStorage.getItem('ESJ'));
+          localStorage.setItem('ESJ', bCount + 1);
          }
     } else {
-      if(eventPush === "C"){
-        values = "C"
-        if(localStorage.getItem('C') === null ){
-          localStorage.setItem('C', 1);
+      if(eventPush === "CC"){
+        values = "CC"
+        if(localStorage.getItem('CC') === null ){
+          localStorage.setItem('CC', 1);
          } else {
-          var cCount = parseInt(localStorage.getItem('C'));
-          localStorage.setItem('C', cCount + 1);
+          var cCount = parseInt(localStorage.getItem('CC'));
+          localStorage.setItem('CC', cCount + 1);
          }
     } else {
-      if(eventPush === "D"){
-        values = "D"
-        if(localStorage.getItem('D') === null ){
-          localStorage.setItem('D', 1);
+      if(eventPush === "CL"){
+        values = "CL"
+        if(localStorage.getItem('CL') === null ){
+          localStorage.setItem('CL', 1);
          } else {
-          var dCount = parseInt(localStorage.getItem('D'));
-          localStorage.setItem('D', dCount + 1);
+          var dCount = parseInt(localStorage.getItem('CL'));
+          localStorage.setItem('CL', dCount + 1);
          }
 
       } else {
-      if(eventPush === "E"){
-        values = "E"
-        if(localStorage.getItem('E') === null ){
-          localStorage.setItem('E', 1);
+      if(eventPush === "TSS"){
+        values = "TSS"
+        if(localStorage.getItem('TSS') === null ){
+          localStorage.setItem('TSS', 1);
          } else {
-          var eCount = parseInt(localStorage.getItem('E'));
-          localStorage.setItem('E', eCount + 1);
+          var eCount = parseInt(localStorage.getItem('TSS'));
+          localStorage.setItem('TSS', eCount + 1);
          }
       } else {
-        if(eventPush === "F"){
-          values = "F"
-          if(localStorage.getItem('F') === null ){
-            localStorage.setItem('F', 1);
+        if(eventPush === "PAJ"){
+          values = "PAJ"
+          if(localStorage.getItem('PAJ') === null ){
+            localStorage.setItem('PAJ', 1);
            } else {
-            var fCount = parseInt(localStorage.getItem('F'));
-            localStorage.setItem('F', fCount + 1);
-           }
+            var fCount = parseInt(localStorage.getItem('PAJ'));
+            localStorage.setItem('PAJ', fCount + 1);
+           } 
+        } else {
+
+        if(eventPush === "SRI"){
+          values = "SRI"
+          if(localStorage.getItem('SRI') === null ){
+            localStorage.setItem('SRI', 1);
+          } else {
+            var gCount = parseInt(localStorage.getItem('SRI'));
+            localStorage.setItem('SRI', gCount + 1);
+          }
         }
-    }
-    }
-    }
+        }
+       }
+       }
+      } 
     }
   }
 
-  alert(values + idA); 
+  //alert(values + idA); 
   
 
 
@@ -111,14 +145,14 @@ import quizQuestions from '../../api/csQuestions';
   }
  
   componentWillMount() {
-    const Q11 = tuples[0][0][0].qText;
-    const Q11ID = tuples[0][0][0].catID;
+    // const Q11 = tuples[0][0][0].qText;
+    // const Q11ID = tuples[0][0][0].catID;
 
-    const printQ12 = tuples[0][1][0].qText;
-    const printQ12ID = tuples[0][1][0].catID;
+    // const printQ12 = tuples[0][1][0].qText;
+    // const printQ12ID = tuples[0][1][0].catID;
 
-     alert(Q11 + Q11ID + printQ12 + printQ12ID);
-    const shuffledQ = _.shuffle(quizQuestions[0].questions);
+     //alert(Q11 + Q11ID + printQ12 + printQ12ID);
+    //const shuffledQ = _.shuffle(quizQuestions[0].questions);
    //alert(shuffledQ[0].qText);
     
    
@@ -152,9 +186,11 @@ import quizQuestions from '../../api/csQuestions';
     return (
          <div>
           <Header /> 
-
-          <hr/>
+           <hr/>
           <br />
+          <div className="aboutWrapper">
+          <h3 id="center">Choose the statement that means more to you</h3>
+          </div>
           <br />
           <Container>
           <Row>
@@ -162,9 +198,9 @@ import quizQuestions from '../../api/csQuestions';
       
            <AvForm className="text-form" >
  
-           <Button className='quizbtnL' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA + this.state.qAid}</Button>      
+           <Button className='quizbtnL' name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA + this.state.qAid}</Button>      
            
-           <Button className='quizbtnR btn' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB + this.state.qBid}</Button>      
+           <Button className='quizbtnR btn' name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB + this.state.qBid}</Button>      
 
           </AvForm>
           </Col>
@@ -173,8 +209,8 @@ import quizQuestions from '../../api/csQuestions';
           
               {/*JSON.stringify(this.state.values)*/}
          
-        {/* {fireRedirect && (<Redirect to={from || '/quiz/q2'}/>
-        )} */}
+         {fireRedirect && (<Redirect to={from || '/quiz/q2'}/>
+        )} 
         
 </div>
       );

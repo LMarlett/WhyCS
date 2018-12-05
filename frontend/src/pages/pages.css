@@ -85,6 +85,12 @@
   }
 /* ========== QUIZ START PAGE =========== */
 
+
+#center{
+  text-align: center;
+}
+
+
 /* ======= SURVEY INTAKE FORM STYLES ======= */
 .intake-form {
   width: 100% !important;
@@ -336,3 +342,39 @@
         width: 80%;
     }
 }
+
+
+/* Home page */
+
+blockquote {
+  background: #eee;
+  border-radius: 5px;
+}
+
+blockquote p {
+  padding: 15px;
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
+
+.pageTitle {
+  color: #36b8f8;
+} 
+
+.textHome {
+  color: grey;
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
+  text-align: center !important;
+}
+
+
+/* end Home page */
+
+
