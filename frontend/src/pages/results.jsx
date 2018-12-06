@@ -7,6 +7,19 @@ import CategoryInformation from '../components/categoryInformation';
 import CategoryBlocksHeader from '../components/categoryBlocksHeader';
 import {NavLink, Button} from 'reactstrap';
 import  BaseButtonExample from '../components/socials';
+import axios from 'axios';
+
+
+
+var localInstance = axios.create({
+  baseURL: 'http://localhost:8000/api',
+  headers: {
+    "Accept": "application/json",
+   // "Access-Control-Allow-Origin": "*",
+    //'Authorization': 'Bearer '+ USER_TOKEN
+
+  }
+});
 
 //to do get all results from db put into the state map thingy 
 //or a pie graph chart
@@ -26,6 +39,85 @@ import  BaseButtonExample from '../components/socials';
 
   }
 
+  componentWillMount(){
+    var info = JSON.parse(localStorage.getItem('inputs'));
+    var zip = info.zip;
+    var career = info.career;
+    var gender = info.gender;
+    var ageRange = info.ageRange;
+    var misc = (localStorage.getItem('chosenRejected'));
+
+    if (localStorage.getItem('EWD') === null){
+      var ewdcount = 0;
+    } else {
+       ewdcount = parseInt(localStorage.getItem('EWD'));
+    }
+  
+    if (localStorage.getItem('CC') === null){
+      var cccount = 0;
+    } else {
+      cccount = parseInt(localStorage.getItem('CC'));
+    }
+  
+    if (localStorage.getItem('CL') === null){
+      var clcount = 0;
+    } else {
+     clcount = parseInt(localStorage.getItem('CL'));
+    }
+
+    if (localStorage.getItem('TSS') === null){
+      var tsscount = 0;
+    } else {
+     tsscount = parseInt(localStorage.getItem('TSS'));
+    }
+
+    if (localStorage.getItem('ESJ') === null){
+      var esjcount = 0;
+    } else {
+     esjcount = parseInt(localStorage.getItem('ESJ'));
+    }
+
+    if (localStorage.getItem('SRI') === null){
+      var sricount = 0;
+    } else {
+     sricount = parseInt(localStorage.getItem('SRI'));
+    }
+
+    if (localStorage.getItem('PAJ') === null){
+      var pajcount = 0;
+    } else {
+     pajcount = parseInt(localStorage.getItem('PAJ'));
+    }
+   
+    var check = ewdcount+cccount+clcount+tsscount+esjcount+sricount+pajcount;
+    if ( check !== 21){
+      alert("Please start the quiz and complete all answers");
+      //refirect to quiz start page
+
+    }
+
+    
+    localInstance.post('/useringredients', {
+      ESW: ewdcount,
+      CC: cccount,
+      CL: clcount,
+      TSS: tsscount,
+      ESJ: esjcount,
+      SRI: sricount,
+      PAJ: pajcount
+
+    })
+        .then((response) => {    
+          //alert(`Server response: \n${JSON.stringify(response.data}`);
+         // alert(`Server response: \n${JSON.stringify(response)}`);
+        })
+          .catch((error) => {
+           // alert(`Error posting \n${error}`);
+                    })
+        
+      
+  }
+  
 
   componentWillUnmount() {
     // fires immediately before component is unmounted
