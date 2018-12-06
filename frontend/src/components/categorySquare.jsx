@@ -60,11 +60,11 @@ class CategorySquare extends Component {
                 ];
 
                 var responsesSort = responses.sort(function (a, b) {
-                    return (a.count - b.count );
+                    return (b.count - a.count );
                 });
 
-                alert(responses);
-                alert(responses[0].name + responses[1].name + responses[2].name)
+                 
+              
 
 
         
