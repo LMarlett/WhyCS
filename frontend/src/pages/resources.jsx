@@ -32,6 +32,11 @@ class Resources extends Component {
           </li>
         </ul>
         </div>
+
+        <br/>
+        <br/>
+        <br/>
+
         <Footer />
       </div>
     )

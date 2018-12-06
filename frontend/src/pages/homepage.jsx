@@ -70,6 +70,10 @@ class Home extends Component {
           </Col>
     </Row>
     </div>
+    <br/>
+    <br/>
+    <br/>
+
       <Footer />
         </div>
         
