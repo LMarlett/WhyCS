@@ -179,6 +179,10 @@
         margin: 30px 0px;
     }
 }
+
+.text{
+    color: white !important;
+}
 /* ===== Category Information Component */
 .categoryInfoWrapper {
     margin-top: 50px;
