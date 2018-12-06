@@ -39,6 +39,7 @@ import CategoryBlocksHeader from '../components/categoryBlocksHeader';
               
               */}
               <CategorySquare />
+ 
             </div>
           </div>
 
