@@ -24,9 +24,6 @@ class QuizStart extends Component {
  
    }
 
- 
-
-
   render() {
     const { from } = this.props.location.state || '/'
 
@@ -34,26 +31,21 @@ class QuizStart extends Component {
 
     return (
       <div>
-      <Header />
-      <br/><br/>
-      <Row>
-      <Col Col sm="12" md={{ size: 8, offset: 2 }}>
-      <Card body className="text-center" inverse style={{borderColor: 'white' }}> 
-         <CardTitle><div className="homePhrase">WhyCS Quiz</div></CardTitle>
-        <CardText>
-          <div className="homeQuote">
-            Fill out the form below to start the quiz. 
-          </div>
+        <Header />
+        <br/><br/>
+        <Row>
+          <Col Col sm="12" md={{ size: 8, offset: 2 }}>
+          <Card body className="text-center" inverse style={{borderColor: 'white' }}> 
+            <CardTitle><div className="homePhrase">WhyCS Quiz</div></CardTitle>
+            <CardText>
+              <div className="homeQuote"> Fill out the form below to start the quiz.</div>
+            </CardText>
+            <br/>
+        {/* </Row> */} 
+          <Row> 
+          <Col Col sm="12" md={{ size: 6, offset: 3 }}>
  
-        </CardText>
-        <br/>
-       
-
-      <Row> 
-       <Col Col sm="12" md={{ size: 6, offset: 3 }}>
- 
-      <AvForm className="text-form" onValidSubmit={this.handleValidSubmit}>
- 
+          <AvForm className="text-form" onValidSubmit={this.handleValidSubmit}>
              <AvField className="intake-form" name="zip" label="Zip" type="number"  placeHolder="00000" 
              validate={{
                number: true,
@@ -96,17 +88,12 @@ class QuizStart extends Component {
           <Button className='btn' outline color="secondary">Start Quiz</Button>      
  
         </AvForm>
-        
         </Col>
         </Row>
-
         </Card>
         </Col>
-         </Row>
-        
-      </Card>
-     </Col>
-    </Row>
+        </Row>
+      
 
         {/*JSON.stringify(this.state.values)*/}
 
