@@ -10,15 +10,15 @@ module.exports.addResponse = function addResponseExport(req, res) {
      zip: req.body.zip,
     ageRange: req.body.ageRange,
     gender: req.body.gender,
-    careerField: req.body.career,
+    careerField: req.body.careerField,
     EWD: req.body.EWD,
     CC: req.body.CC,
     CL: req.body.CL,
     TSS: req.body.TSS,
     ESJ: req.body.ESJ,
     SRI: req.body.SRI,
-    PJA: req.body.PJA,
-     misc: req.body.chosenRejected,
+    PAJ: req.body.PAJ,
+     misc: req.body.misc,
 
     }).then((userResponse) => {
        console.log(`${userResponse} added!`);

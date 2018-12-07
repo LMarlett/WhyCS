@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     TSS: DataTypes.INTEGER,
     ESJ: DataTypes.INTEGER,
     SRI: DataTypes.INTEGER,
-    PJA: DataTypes.INTEGER,
+    PAJ: DataTypes.INTEGER,
     beliefString: DataTypes.STRING,
     timestamp: DataTypes.DATE,
     misc: DataTypes.STRING

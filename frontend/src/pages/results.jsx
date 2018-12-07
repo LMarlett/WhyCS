@@ -98,7 +98,7 @@ var localInstance = axios.create({
 
     
     localInstance.post('/user/response', {
-      ESW: ewdcount,
+      EWD: ewdcount,
       CC: cccount,
       CL: clcount,
       TSS: tsscount,
@@ -115,7 +115,7 @@ var localInstance = axios.create({
     })
         .then((response) => {    
           //alert(`Server response: \n${JSON.stringify(response.data}`);
-          alert(`Server response: \n${JSON.stringify(response)}`);
+          //alert(`Server response: \n${JSON.stringify(response)}`);
         })
           .catch((error) => {
             alert(`Error posting \n${error}`);

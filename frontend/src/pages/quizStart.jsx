@@ -96,7 +96,7 @@ class QuizStart extends Component {
              <AvField className="intake-form" name="career" label="Career Field" type="text"  errorMessage="Please enter your career type" 
              validate={{
             required: {value: true},
-            pattern: {value: '^[A-Za-z0-9]+$'},
+            pattern: {value: '^[A-Za-z0-9 ]+$'},
             minLength: {value: 3},
             maxLength: {value: 25}
           }} />
