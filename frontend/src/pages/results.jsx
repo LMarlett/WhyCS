@@ -49,7 +49,7 @@ var localInstance = axios.create({
 
       alert("Please start the quiz and complete all answers");
       //refirect to quiz start page
-      //this.setState({ fireRedirect: true });
+      this.setState({ fireRedirect: true });
 
 
 
@@ -108,7 +108,7 @@ var localInstance = axios.create({
     if ((check !== 21)){
       alert("Please start the quiz and complete all answers");
       //refirect to quiz start page
-      //this.setState({ fireRedirect: true });
+      this.setState({ fireRedirect: true });
 
   
 
@@ -187,12 +187,9 @@ var localInstance = axios.create({
               
           <div className="resultsChart">
           <br />
-          <br />
-
           <img src={blackboard} className="homeGraphic" alt="WhyCS Blackboard Drawing" />
        
           <br />          <br />
-          <br />
 
             <NavLink href="/resources" className="buttonWrapper">
               <Button className="btn btn-danger text" role="button" >Do this with your colleagues</Button>
