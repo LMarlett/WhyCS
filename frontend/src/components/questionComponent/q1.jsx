@@ -161,11 +161,16 @@ import quizQuestions from '../../api/csQuestions';
           <Col sm="12" md={{ size: 10, offset: 1 }}>
       
            <AvForm className="text-form" >
- 
-           <Button className='quizbtnL' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA + this.state.qAid}</Button>      
-           
-           <Button className='quizbtnR btn' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB + this.state.qBid}</Button>      
-
+           {/* button left */}
+            <div className="quizbtnL" onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>
+              <p className="quizbtnHeader">"We should teach Computer Science because..."</p>
+              <p className="quizbtnStatement">{this.state.qA + this.state.qAid}</p>
+            </div>
+            {/* button right */}
+            <div className="quizbtnR" onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>
+              <p className="quizbtnHeader">"We should teach Computer Science because..."</p>
+              <p className="quizbtnStatement">{this.state.qB + this.state.qBid}</p>
+            </div>    
           </AvForm>
           </Col>
           </Row>
