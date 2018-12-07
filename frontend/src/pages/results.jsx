@@ -14,7 +14,7 @@ import { Redirect } from 'react-router';
 
 
 var localInstance = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: '/api', 
   headers: {
     "Accept": "application/json",
    // "Access-Control-Allow-Origin": "*",
@@ -45,7 +45,17 @@ var localInstance = axios.create({
 
   componentWillMount(){
 
-    
+    if (localStorage.inputs === undefined){
+
+      alert("Please start the quiz and complete all answers");
+      //refirect to quiz start page
+      //this.setState({ fireRedirect: true });
+
+
+
+  } else {
+
+    var info = JSON.parse(localStorage.getItem('inputs'));
 
     if (localStorage.getItem('EWD') === null){
       var ewdcount = 0;
@@ -89,14 +99,18 @@ var localInstance = axios.create({
      pajcount = parseInt(localStorage.getItem('PAJ'));
     }
    
-    var info = JSON.parse(localStorage.getItem('inputs'));
+
+ 
+
+ 
+  
     var check = ewdcount+cccount+clcount+tsscount+esjcount+sricount+pajcount;
     if ((check !== 21)){
       alert("Please start the quiz and complete all answers");
       //refirect to quiz start page
-      this.setState({ fireRedirect: true });
+      //this.setState({ fireRedirect: true });
 
-    } else {
+  
 
     var zip = info.zip;
     var career = info.career;
@@ -131,7 +145,7 @@ var localInstance = axios.create({
       
   }
 }
-
+  }
   componentWillUnmount() {
     // fires immediately before component is unmounted
     // from DOM (removed)
@@ -173,9 +187,12 @@ var localInstance = axios.create({
               
           <div className="resultsChart">
           <br />
+          <br />
+
           <img src={blackboard} className="homeGraphic" alt="WhyCS Blackboard Drawing" />
        
           <br />          <br />
+          <br />
 
             <NavLink href="/resources" className="buttonWrapper">
               <Button className="btn btn-danger text" role="button" >Do this with your colleagues</Button>
