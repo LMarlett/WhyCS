@@ -8,7 +8,9 @@ import CategoryBlocksHeader from '../components/categoryBlocksHeader';
 import {NavLink, Button} from 'reactstrap';
 import  BaseButtonExample from '../components/socials';
 import axios from 'axios';
+import blackboard from '../images/whycs_blackboard.jpeg';
 
+import { Redirect } from 'react-router';
 
 
 var localInstance = axios.create({
@@ -29,6 +31,8 @@ var localInstance = axios.create({
     super(props);
     this.toggle = this.toggle.bind(this);
     this.state = {
+      fireRedirect: false,
+
       isOpen: false
     };
   }
@@ -40,12 +44,8 @@ var localInstance = axios.create({
   }
 
   componentWillMount(){
-    var info = JSON.parse(localStorage.getItem('inputs'));
-    var zip = info.zip;
-    var career = info.career;
-    var gender = info.gender;
-    var ageRange = info.ageRange;
-    var chosenRejected = (localStorage.getItem('chosenRejected'));
+
+    
 
     if (localStorage.getItem('EWD') === null){
       var ewdcount = 0;
@@ -89,14 +89,21 @@ var localInstance = axios.create({
      pajcount = parseInt(localStorage.getItem('PAJ'));
     }
    
+    var info = JSON.parse(localStorage.getItem('inputs'));
     var check = ewdcount+cccount+clcount+tsscount+esjcount+sricount+pajcount;
-    if ( check !== 21){
+    if ((check !== 21)){
       alert("Please start the quiz and complete all answers");
       //refirect to quiz start page
-        
-    }
+      this.setState({ fireRedirect: true });
 
-    
+    } else {
+
+    var zip = info.zip;
+    var career = info.career;
+    var gender = info.gender;
+    var ageRange = info.ageRange;
+    var chosenRejected = (localStorage.getItem('chosenRejected'));
+
     localInstance.post('/user/response', {
       EWD: ewdcount,
       CC: cccount,
@@ -123,18 +130,18 @@ var localInstance = axios.create({
         
       
   }
-  
+}
 
   componentWillUnmount() {
     // fires immediately before component is unmounted
     // from DOM (removed)
-    (window).unload(function(){
-      localStorage.clear();
-    });
-   }
+       localStorage.clear();
+    }
 
   render() {
-    
+    const { from } = this.props.location.state || '/'
+
+    const { fireRedirect } = this.state
     return (
          <div>
 
@@ -146,11 +153,12 @@ var localInstance = axios.create({
             <div className="yourResultsInner">
               <h2>Your Results</h2>
               <br />
-
+              <p className='text'>---- </p>
               <CategorySquare />
              
-            <p className='text'>---- </p>
 
+            <p className='text'>---- </p>
+            <p className='text'>---- </p>
 
             <div className="SocialsContainer">
 
@@ -165,16 +173,8 @@ var localInstance = axios.create({
               
           <div className="resultsChart">
           <br />
-          <p>Static content goes here</p>
-          <br />
-          <br />
-          <br />
-          <br />
-           <br />
-          <br /> 
-           <br />
-           <br />
-           <br />
+          <img src={blackboard} className="homeGraphic" alt="WhyCS Blackboard Drawing" />
+       
           <br />          <br />
 
             <NavLink href="/resources" className="buttonWrapper">
@@ -196,7 +196,7 @@ var localInstance = axios.create({
           </div>
           </div>
           <Footer />
- 
+          {fireRedirect && (<Redirect to={from || '/quiz/start'}/>)} 
         </div>
      );
   }

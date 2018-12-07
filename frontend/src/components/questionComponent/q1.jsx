@@ -64,8 +64,8 @@ import quizQuestions from '../../api/csQuestions';
 
     // add up the chosen categories
 
-    if(eventPush === "EWD"){
-      values = "EWD"
+    if(eventPush === 'EWD'){
+      values = 'EWD'
       if(localStorage.getItem('EWD') === null ){
         localStorage.setItem('EWD', 1);
        } else {
@@ -196,11 +196,67 @@ import quizQuestions from '../../api/csQuestions';
           <Col sm="12" md={{ size: 10, offset: 1 }}>
       
            <AvForm className="text-form" >
- 
-           <Button className='quizbtnL' name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA + this.state.qAid}</Button>      
-           
-           <Button className='quizbtnR btn' name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB + this.state.qBid}</Button>      
+         
+         
+         
+         
+           {/* <div class="container">
+                  <Button
+                    className="quizbtnL"
+                    name="A"
+                    onClick={this.handleValidSubmit}
+                    id={this.state.qAcat}
+                  >
+                    <div class="box">
+                      <div class="inner-box">
+                        <p class="inner-box-text">
+                          We should teach
+                          <br /> Computer Science because...
+                        </p>
+                      </div>
 
+                      <p class="box-description-text">
+                        {this.state.qA + this.state.qAid}
+                      </p>
+                    </div>
+                  </Button>
+
+                  <Button
+                    className="quizbtnR btn"
+                    name="B"
+                    onClick={this.handleValidSubmit}
+                    outline
+                    color="secondary"
+                    id={this.state.qBcat}
+                  >
+                    <div class="box">
+                      <div class="inner-box">
+                        <p class="inner-box-text">
+                          We should teach
+                          <br /> Computer Science because...
+                        </p>
+                      </div>
+
+                      <p class="box-description-text">
+                        {this.state.qB + this.state.qBid}
+                      </p>
+                    </div>
+                  </Button>
+                </div> */}
+         
+         
+         
+         
+         
+            <div>
+            <div>
+           <Button className='quizbtnL' name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA + this.state.qAid}</Button>      
+           </div>
+
+           <div>
+           <Button className='quizbtnR btn' name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB + this.state.qBid}</Button>      
+           </div>
+           </div> 
           </AvForm>
           </Col>
           </Row>

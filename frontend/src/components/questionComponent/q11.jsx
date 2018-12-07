@@ -197,9 +197,9 @@ import quizQuestions from '../../api/csQuestions';
       
            <AvForm className="text-form" >
  
-           <Button className='quizbtnL' name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA + this.state.qAid}</Button>      
+           <Button className='quizbtnL' name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA}</Button>      
            
-           <Button className='quizbtnR btn' name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB + this.state.qBid}</Button>      
+           <Button className='quizbtnR btn' name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB}</Button>      
 
           </AvForm>
           </Col>
