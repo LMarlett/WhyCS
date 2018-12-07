@@ -1,8 +1,10 @@
 const bodyParser = require('body-parser');
 const logger = require('morgan');
+ 
 const express = require('express');
 const models = require('./models');
  const helmet = require('helmet')
+ const routes = require('./routes/routes');
 
  
 
@@ -39,6 +41,8 @@ app.set('view engine', 'handlebars');
 app.set('views', `${__dirname}/views/`);
 */
 
+
+app.use('/api', routes);
 
 
 // Load up all of the controllers

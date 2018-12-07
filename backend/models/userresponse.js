@@ -1,8 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const UserResponse = sequelize.define('UserResponse', {
+  const UserResponse = sequelize.define('userResponse', {
    
-    uid: DataTypes.UUID,
     zip: DataTypes.INTEGER,
     ageRange: DataTypes.STRING,
     gender: DataTypes.STRING,

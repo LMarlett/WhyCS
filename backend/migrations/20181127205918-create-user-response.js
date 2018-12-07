@@ -8,9 +8,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      uid: {
-        type: Sequelize.UUID
-      },
       zip: {
         type: Sequelize.INTEGER
       },

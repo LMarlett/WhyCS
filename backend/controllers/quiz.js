@@ -11,7 +11,7 @@ const AltController = {
   registerRouter() {
     const router = express.Router();
 
-    router.get('/', this.index);
+    router.get('/quiz', this.index);
     router.post('/', this.create);
     router.put('/:id', this.update);
     router.delete('/:id', this.delete);
@@ -20,23 +20,23 @@ const AltController = {
   },
   index(req, res) {
     res.json({
-      msg: "Successful GET to '/alt' route"
+      msg: "Successful GET to '/quiz' route"
     });
   },
   create(req, res) {
     res.json({
-      msg: "Successful POST to '/alt' route"
+      msg: "Successful POST to '/quiz' route"
     });
   },
   update(req, res) {
     res.json({
-      msg: "Successful PUT to '/alt' route",
+      msg: "Successful PUT to '/quiz' route",
       id: req.params.id
     });
   },
   delete(req, res) {
     res.json({
-      msg: "Successful DELETE to '/alt' route",
+      msg: "Successful DELETE to '/quiz' route",
       id: req.params.id
     });
   },

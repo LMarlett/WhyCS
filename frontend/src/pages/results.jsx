@@ -45,7 +45,7 @@ var localInstance = axios.create({
     var career = info.career;
     var gender = info.gender;
     var ageRange = info.ageRange;
-    var misc = (localStorage.getItem('chosenRejected'));
+    var chosenRejected = (localStorage.getItem('chosenRejected'));
 
     if (localStorage.getItem('EWD') === null){
       var ewdcount = 0;
@@ -93,26 +93,32 @@ var localInstance = axios.create({
     if ( check !== 21){
       alert("Please start the quiz and complete all answers");
       //refirect to quiz start page
-
+        
     }
 
     
-    localInstance.post('/useringredients', {
+    localInstance.post('/user/response', {
       ESW: ewdcount,
       CC: cccount,
       CL: clcount,
       TSS: tsscount,
       ESJ: esjcount,
       SRI: sricount,
-      PAJ: pajcount
+      PAJ: pajcount,
+      zip: zip,
+      careerField: career,
+      misc: chosenRejected,
+      ageRange: ageRange,
+      gender: gender
+
 
     })
         .then((response) => {    
           //alert(`Server response: \n${JSON.stringify(response.data}`);
-         // alert(`Server response: \n${JSON.stringify(response)}`);
+          alert(`Server response: \n${JSON.stringify(response)}`);
         })
           .catch((error) => {
-           // alert(`Error posting \n${error}`);
+            alert(`Error posting \n${error}`);
                     })
         
       
