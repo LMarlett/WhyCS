@@ -59,20 +59,24 @@ class Home extends Component {
         <NavLink href="/quiz/start" className="buttonWrapper">
         <Button outline color="secondary" className="homeButton">Take the Quiz</Button>
         </NavLink>
-        <CardText>
-          <div className="homeQuote">
-            <p>“Educational plans and projects must have a philosophy... otherwise they are at the mercy of every intellectual breeze that happens to blow."</p>				
-            <p className="quoteAuthor">- John Dewey, 1938</p>
-          </div>
-        </CardText>
+     
       </Card>
 
           </Col>
     </Row>
     </div>
     <br/>
-    <br/>
-    <br/>
+    <Row>
+    <Col sm="12" md={{ size: 8, offset: 2 }}>
+    <CardText>
+          <div className="homeQuote">
+            <p><i>“Educational plans and projects must have a philosophy... otherwise they are at the mercy of every intellectual breeze that happens to blow."</i></p>				
+            <p className="quoteAuthor">- John Dewey, 1938</p>
+          </div>
+        </CardText>
+        </Col>
+        </Row>
+
 
       <Footer />
         </div>

@@ -27,9 +27,9 @@ class Resources extends Component {
           <li>WhyCS statements (handout version)  &nbsp;
           <a className="btn btn-danger" role="button" href={UnpluggedCards} download="WhyCS Unplugged Cards">Download</a>
           </li><br/>
-          <li>WhyCS statements (card version)  &nbsp;
+          {/* <li>WhyCS statements (card version)  &nbsp;
           <a className="btn btn-danger" role="button" href={VisionsStatments} download="WhyCS Unplugged Visions Statements Handout">Download</a>
-          </li>
+          </li> */}
         </ul>
         </div>
 

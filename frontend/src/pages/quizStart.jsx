@@ -93,7 +93,7 @@ class QuizStart extends Component {
 
               }}/>
                 <p className="small">International participants enter 00000</p>
-             <AvField className="intake-form" name="career" label="Career Field" type="text"  errorMessage="Please enter your career type" 
+             <AvField className="intake-form" name="career" label="Role" type="text"  errorMessage="Please enter your career type" 
              validate={{
             required: {value: true},
             pattern: {value: '^[A-Za-z0-9 ]+$'},

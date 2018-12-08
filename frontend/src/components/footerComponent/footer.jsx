@@ -13,7 +13,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
-import whycsLogo from '../../images/WhyCS-Logo.svg'
+import csLogo from '../../images/cs-logo-2018.svg'
 
 class Footer extends Component {
   constructor(props) {
@@ -35,9 +35,9 @@ class Footer extends Component {
 <footer>  
 <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/"><NavLink href="/"><img src={whycsLogo} className="headerLogo" alt="WhyCS Logo" /></NavLink></NavbarBrand>
+          <NavbarBrand href="/"><NavLink href="https://www.csforall.org"><img src={csLogo} className="headerLogo" alt="WhyCS Logo" /></NavLink></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
+          {/* <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               
               <NavItem>
@@ -54,7 +54,7 @@ class Footer extends Component {
               </NavItem>
            
             </Nav>
-          </Collapse>
+          </Collapse> */}
         </Navbar>
       </div>
 

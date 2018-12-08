@@ -109,6 +109,7 @@ var localInstance = axios.create({
       alert("Please start the quiz and complete all answers");
       //refirect to quiz start page
       this.setState({ fireRedirect: true });
+    } else {
 
   
 
@@ -142,7 +143,7 @@ var localInstance = axios.create({
             alert(`Error posting \n${error}`);
                     })
         
-      
+                    
   }
 }
   }
@@ -161,11 +162,10 @@ var localInstance = axios.create({
 
           <Header />
           <div className="resultsWrapper">
-          <CategoryBlocksHeader />
 
           <div className="yourResultsWrapper">
             <div className="yourResultsInner">
-              <h2>Your Results</h2>
+              <h3>You core values around why we should teach computer science are...</h3>
               <br />
               <p className='text'>---- </p>
               <CategorySquare />
@@ -179,7 +179,7 @@ var localInstance = axios.create({
     <BaseButtonExample />
    </div>
 
-            <a className="btn btn-danger text" role="button" href='cd front#impactAreas' >Learn more about impact areas</a>
+            <a className="btn btn-danger text" role="button" href='#impactAreas' >Learn more about impact areas</a>
 
              
             </div>
@@ -187,9 +187,11 @@ var localInstance = axios.create({
               
           <div className="resultsChart">
           <br />
+          <br/>
+            <br/>
           <img src={blackboard} className="homeGraphic" alt="WhyCS Blackboard Drawing" />
        
-          <br />          <br />
+          <br />   <br/>       <br />
 
             <NavLink href="/resources" className="buttonWrapper">
               <Button className="btn btn-danger text" role="button" >Do this with your colleagues</Button>
@@ -200,6 +202,11 @@ var localInstance = axios.create({
 
           <div className="impactAreas" id='impactAreas'>
             <h2>Learn More About Impact Areas</h2>
+
+            <br/>
+            <br/>
+            <CategoryBlocksHeader />
+<br/>
           {/* <NavLink href="#">
             <Button outline color="secondary">Learn More About Impact Areas</Button>
           </NavLink> */}
