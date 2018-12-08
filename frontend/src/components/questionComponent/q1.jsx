@@ -198,16 +198,13 @@ import quizQuestions from '../../api/csQuestions';
            <AvForm className="text-form" >
          
          
-             <div>
-            <div>
-           <Button className='quizbtnL' name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA}</Button>      
-           </div>
+              <div class="wrapper">
 
-           <div>
-           <Button className='quizbtnR btn' name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB}</Button>      
+<Button className='quizbtnL' name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA + this.state.qAcat}</Button>      
+ 
+            <Button className='quizbtnR btn' name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB + this.state.qBcat}</Button>      
            </div>
-           </div>  
-          </AvForm>
+           </AvForm>
           </Col>
           </Row>
           </Container>
@@ -215,7 +212,7 @@ import quizQuestions from '../../api/csQuestions';
               {/*JSON.stringify(this.state.values)*/}
          
          {fireRedirect && (<Redirect to={from || '/quiz/q2'}/>
-        )} 
+        )}  
         
 </div>
       );
