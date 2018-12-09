@@ -191,20 +191,20 @@ import quizQuestions from '../../api/csQuestions';
           <h3 id="center">Choose the statement that means more to you</h3>
           </div>
           <br />
-          <Container>
-          <Row>
-          <Col sm="12" md={{ size: 10, offset: 1 }}>
-      
-           <AvForm className="text-form" >
- 
-           <Button className='quizbtnL' name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA}</Button>      
-           
-           <Button className='quizbtnR btn' name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB}</Button>      
+          <div class="wrapper">
 
-          </AvForm>
-          </Col>
-          </Row>
-          </Container>
+      
+<AvForm className="text-form" >
+
+
+
+ <Button className='quizbtnL' name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA}</Button>      
+
+ <Button className='quizbtnR btn' name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB}</Button>      
+</AvForm>
+
+</div>
+
 
         {fireRedirect && (<Redirect to={from || '/results'}/>
         )}
