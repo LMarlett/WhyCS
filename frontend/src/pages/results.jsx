@@ -14,7 +14,7 @@ import { Redirect } from 'react-router';
 
 
 var localInstance = axios.create({
-  baseURL: '/api', 
+  baseURL: 'whycs.us-east-2.elasticbeanstalk.com/api', 
   headers: {
     "Accept": "application/json",
    // "Access-Control-Allow-Origin": "*",
