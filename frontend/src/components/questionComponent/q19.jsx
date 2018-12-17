@@ -35,7 +35,6 @@ import quizQuestions from '../../api/csQuestions';
     const idA = this.state.qAid;
     const idB = this.state.qBid;
 
-    const eventPush = event.target.id;  
     const chosen = event.target.name;
  
 
