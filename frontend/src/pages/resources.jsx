@@ -8,8 +8,7 @@ import { Button } from 'reactstrap';
  import UnpluggedCards from '../unpluggedResources/WhyCS Unplugged Cards download.pdf';
  import VisionsStatments from '../unpluggedResources/WhyCS Visions Statements Handout.pdf';
 
-
-class Resources extends Component {
+ class Resources extends Component {
   render() {
     return (
       <div>
@@ -22,10 +21,10 @@ class Resources extends Component {
         <p>WhyCS Unplugged resources:</p>
         <ul>
           <li>WhyCS activity slide deck  &nbsp;
-          <a className="btn btn-danger" role="button" href={ActivitySlides} download="WhyCS Unplugged Activity Slides">Download</a>
+          <a className="btn btn-danger" role="button" href={ActivitySlides} download="WhyCS Unplugged Activity Slides.pdf">Download</a>
           </li><br/>
-          <li>WhyCS statements (handout version)  &nbsp;
-          <a className="btn btn-danger" role="button" href={UnpluggedCards} download="WhyCS Unplugged Cards">Download</a>
+          <li>WhyCS statement cards  &nbsp;
+          <a className="btn btn-danger" role="button" href={UnpluggedCards} download="WhyCS Unplugged Cards.pdf">Download</a>
           </li><br/>
           {/* <li>WhyCS statements (card version)  &nbsp;
           <a className="btn btn-danger" role="button" href={VisionsStatments} download="WhyCS Unplugged Visions Statements Handout">Download</a>

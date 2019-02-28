@@ -73,7 +73,7 @@ class QuizStart extends Component {
 
      
       <Row>
-      <Col Col sm="12" md={{ size: 8, offset: 2 }}>
+      <Col sm="12" md={{ size: 8, offset: 2 }}>
       <Card body className="text-center" inverse style={{borderColor: 'white' }}> 
          
         
@@ -84,7 +84,7 @@ class QuizStart extends Component {
       <Col sm="12" md={{ size: 6, offset: 3 }}>
       <AvForm className="text-form" onValidSubmit={this.handleValidSubmit}>
  
-             <AvField className="intake-form" name="zip" label="Zip" type="number"  placeHolder="00000" 
+             <AvField className="intake-form" name="zip" label="Zip" type="number"  placeholder="00000" 
              validate={{
                number: true,
                minLength: {value: 5},

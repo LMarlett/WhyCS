@@ -35,8 +35,10 @@ class Footer extends Component {
 <footer>  
 <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/"><NavLink href="https://www.csforall.org"><img src={csLogo} className="headerLogo" alt="WhyCS Logo" /></NavLink></NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+           <NavLink href="https://www.csforall.org">
+          <img src={csLogo} className="headerLogo" alt="WhyCS Logo" />
+          </NavLink>
+           {/* <NavbarToggler onClick={this.toggle} /> */}
           {/* <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               

@@ -60,7 +60,7 @@ class CategorySquare extends Component {
 
 
     render() {
-        const shareUrl = 'http://www.whycs.org/startQuiz';
+        const shareUrl = 'https://www.whycs.org/startQuiz';
         const title = 'Learn about and find your personal core values in regards to computer science education. Take the WhyCS Quiz now!';
     
         return (

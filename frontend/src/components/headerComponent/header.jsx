@@ -10,10 +10,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+ 
 } from 'reactstrap'
 import './header.css'
 import whycsLogo from '../../images/WhyCS-Logo.svg'

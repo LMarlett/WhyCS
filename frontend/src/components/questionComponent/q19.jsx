@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Header from '../headerComponent/header';
 import './questions.css';
-import { Card,CardImg,CardText,CardBody,CardTitle,CardSubtitle, NavLink,FormGroup,Label,Input,Button,Row,Col,Container } from 'reactstrap';
-import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
+import { Button } from 'reactstrap';
+import { AvForm } from 'availity-reactstrap-validation';
 import { Redirect } from 'react-router'
 import _ from 'lodash';
 import tuples from '../../api/touples';
-import quizQuestions from '../../api/csQuestions';
+// import quizQuestions from '../../api/csQuestions';
  import '../../pages/pages.css';
 
  class Q19 extends Component {
@@ -35,8 +35,9 @@ import quizQuestions from '../../api/csQuestions';
     const idA = this.state.qAid;
     const idB = this.state.qBid;
 
-    const chosen = event.target.name;
- 
+
+    const eventPush = event.target.id;  
+    const chosen = event.target.name; 
 
 
     //record the chosen button and the rejected button
@@ -190,7 +191,7 @@ import quizQuestions from '../../api/csQuestions';
           <h3 id="center">Choose the statement that means more to you</h3>
           </div>
           <br />
-          <div class="wrapper">
+          <div className="wrapper">
 
       
 <AvForm className="text-form" >

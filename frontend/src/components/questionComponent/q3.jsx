@@ -191,7 +191,7 @@ import quizQuestions from '../../api/csQuestions';
           <h3 id="center">Choose the statement that means more to you</h3>
           </div>
           <br />
-          <div class="wrapper">
+          <div className="wrapper">
 
       
 <AvForm className="text-form" >
