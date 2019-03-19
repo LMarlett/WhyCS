@@ -2,18 +2,11 @@ import React, { Component } from 'react';
 import '../../App.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
-import csLogo from '../../images/cs-logo-2018.svg'
+    } from 'reactstrap';
+    import './footer.css'
+    import csLogo from '../../images/cs-logo-2018.svg'
 
 class Footer extends Component {
   constructor(props) {
@@ -32,11 +25,14 @@ class Footer extends Component {
   render() {
     return (
 <div>
+
 <footer>  
-<div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/"><NavLink href="https://www.csforall.org"><img src={csLogo} className="headerLogo" alt="WhyCS Logo" /></NavLink></NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+         <Navbar color="light footerBar" light expand="md">
+         <p className="footerText">Sponsored by</p>
+           <NavLink href="https://www.csforall.org"><img src={csLogo} className="WhyCSLogo" alt="WhyCS Logo" /></NavLink>
+           
+           
+           {/* <NavbarToggler onClick={this.toggle} /> */}
           {/* <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               
@@ -56,8 +52,7 @@ class Footer extends Component {
             </Nav>
           </Collapse> */}
         </Navbar>
-      </div>
-
+ 
 </footer>
 </div>
 

@@ -215,13 +215,13 @@
     flex-direction: column;
     /* vertical-align: middle;  */
 }
-#blue {background-color: #55B5F4}
-#green {background-color: #54A98F}
-#purple {background-color: #8E7BC1}
-#pink {background-color: #ec8cba}
-#red {background-color: #DF6769}
-#orange {background-color: #D98B3F}
-#yellow {background-color: #EFC13D}
+#blue {background-color: #3fb9f5}
+#green {background-color: #12b1aa}
+#purple {background-color: #8e7cc3}
+#pink {background-color: #e361a6}
+#red {background-color: #e06666}
+#orange {background-color: #e69138}
+#yellow {background-color: #f1c232}
 
 /* Responsiveness of Raninbow Category Blocks Header */
 @media only screen and (max-width: 1320px) {

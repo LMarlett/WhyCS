@@ -4,18 +4,15 @@ import Footer from '../components/footerComponent/footer'
 
 import {
   Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  NavLink,
+   CardText,
+   CardTitle,
+   NavLink,
   Button,
   Row,
   Col
 } from 'reactstrap'
 import '../pages/pages.css';
-import big from '../images/large.png';
+// import big from '../images/large.png';
 import blackboard from '../images/whycs_blackboard.jpeg';
 
 class Home extends Component {

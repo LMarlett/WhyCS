@@ -1,33 +1,6 @@
-/* .center{
-    text-align: center;
-
-}
-
-.quizbtnL{
-    float:left;
-    width: 40%;
-    height: 400px;
-    text-align: center;
-    padding: 15px 32px;
-    white-space: normal !important;
-
-}
-
-.quizbtnR{
-    float:right;
-    width: 40%;
-    height: 400px;
-    text-align: center;
-    padding: 15px 32px;
-    white-space: normal !important;
 
 
-}
-
- */
- 
-
-
+/* 
  .center {
     text-align: center;
   }
@@ -97,4 +70,127 @@
     margin: auto;
 
 
+} */
+
+
+.center {
+    text-align: center;
+}
+.wrapper .text-form {
+    width: 100%;
+    text-align: center !important;
+    font-family: CircularStd;
+    min-height: 450px;
+}
+.quizbtnL {
+    width: 420px;
+    height: 420px;
+    background-color: white !important;
+    border: none !important;
+    font-size: 18px !important;
+    color: black !important;
+    padding: 80px 50px 0px 50px !important;
+    white-space: normal !important;
+     background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 365px 420px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 30px;
+
+}
+.quizbtnR {
+    margin-top: 30px;
+    width: 420px;
+    height: 420px;
+    background-color: white !important;
+    border: none !important;
+    font-size: 18px !important;
+    color: black !important;
+    padding: 80px 50px 0px 50px !important;
+    white-space: normal !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 365px 420px !important;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+
+/*  */
+/* 
+#blue {background-color: #3fb9f5}
+#green {background-color: #12b1aa}
+#purple {background-color: #8e7cc3}
+#pink {background-color: #e361a6}
+#red {background-color: #e06666}
+#orange {background-color: #e69138}
+#yellow {background-color: #f1c232} */
+
+.bgBlue{
+    background-image:url('../../images/bgBlue.png') !important;
+    background-size: 88% 420px !important;
+}
+
+.bgGreen{
+    background-image:url('../../images/bgGreen.png') !important;
+    background-size: 88% 420px !important;
+}
+.bgPurple{
+    background-image:url('../../images/bgPurple.png') !important;
+    background-size: 88% 420px !important;
+}
+
+.bgPink{
+    background-image:url('../../images/bgPink.png') !important;
+    background-size: 88% 420px !important;
+}
+.bgRed{
+    background-image:url('../../images/bgRed.png') !important;
+    background-size: 88% 420px !important;
+}
+
+.bgOrange{
+    background-image:url('../../images/bgOrange.png') !important;
+    background-size: 88% 420px !important;
+}
+
+.bgYellow{
+    background-image:url('../../images/bgYellow.png') !important;
+    background-size: 88% 420px !important;
+}
+
+/* ------------ end bachground images ------------ */
+
+
+.quizbtnR:hover, .quizbtnL:hover { 
+    color: #3061ac !important;
+}
+.btn-outline-secondary.focus, .btn-outline-secondary:focus {
+    box-shadow: none !important;
+}
+/* if adding styles for mobile, put them here */
+@media only screen and (max-width: 766px) {
+    
+}
+
+
+/*  progress bar */
+.progressBarDiv{
+text-align: center !important;
+}
+
+.center{
+    display: inline-block;
+    width: 40%;
+ 
+}
+
+.colorBar{
+    color: #3061ac !important;
+ }
+
+ .progress-bar-purple {
+    background-color: purple !important;
 }

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Header from '../headerComponent/header';
 import './questions.css';
-import { Card,CardImg,CardText,CardBody,CardTitle,CardSubtitle, NavLink,FormGroup,Label,Input,Button,Row,Col,Container } from 'reactstrap';
-import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
+import { Button, Progress } from 'reactstrap';
+import { AvForm } from 'availity-reactstrap-validation';
 import { Redirect } from 'react-router';
 import _ from 'lodash';
 import tuples from '../../api/touples';
-import quizQuestions from '../../api/csQuestions';
- import '../../pages/pages.css';
+// import touplesShuffled from '../../api/touples';
+  import '../../pages/pages.css';
 
  class Q1 extends Component {
 
@@ -26,7 +26,7 @@ import quizQuestions from '../../api/csQuestions';
 
  
     };
-      
+   
   }
 
   handleValidSubmit(event, values) {
@@ -153,20 +153,34 @@ import quizQuestions from '../../api/csQuestions';
      //alert(Q11 + Q11ID + printQ12 + printQ12ID);
     //const shuffledQ = _.shuffle(quizQuestions[0].questions);
    //alert(shuffledQ[0].qText);
-    
    
-       
+ 
     this.setState({
+
        qA: tuples[0][0][0].qText,
       qAcat: tuples[0][0][0].catID,
         qAid: tuples[0][0][0].qID,
         qB: tuples[0][1][0].qText,
         qBcat: tuples[0][1][0].catID,
           qBid: tuples[0][1][0].qID
+
           
      });
-// alert(this.state.answerOptions);
-  }
+//  var array = [];
+  //alert(this.state.answerOptions);
+//  for(var i=0; i < tuples.length; i++){
+  //  for(var j=0; j < tuples[0].length; j++){
+    // for(var k=0; k < tuples[0][0].length; k++){
+  // array.push(tuples[0][j][0].catID);
+    // }
+ // }
+//  }
+// console.log(_.shuffle(tuples));
+
+// console.log(array);
+
+}
+
 
  
   
@@ -180,31 +194,100 @@ import quizQuestions from '../../api/csQuestions';
 
     const { from } = this.props.location.state || '/'
 
-    const { fireRedirect } = this.state
+    const { fireRedirect } = this.state    
+
+
+// left button image 
+  var btnClassLeft = ''
+  var leftSwitch = this.state.qAcat
+
+      switch(leftSwitch) {
+        case 'EWD':
+        btnClassLeft = 'quizbtnL bgBlue';
+             break;
+        case 'ESJ':
+        btnClassLeft =  'quizbtnL bgGreen';
+             break;
+        case 'CC':
+        btnClassLeft = 'quizbtnL bgPurple';
+             break;
+        case 'CL':
+        btnClassLeft =  'quizbtnL bgPink';
+             break;
+        case 'TSS':
+        btnClassLeft =  'quizbtnL bgRed';
+             break;
+        case 'PAJ':
+        btnClassLeft =  'quizbtnL bgOrange';
+             break;
+        case 'SRI':
+        btnClassLeft =  'quizbtnL bgYellow';
+             break;
+  }
+
+
+  // right button image 
+  var btnClassRight = ''
+  var rightSwitch = this.state.qBcat
+
+      switch(rightSwitch) {
+        case 'EWD':
+        btnClassRight = 'quizbtnR bgBlue';
+             break;
+        case 'ESJ':
+        btnClassRight =  'quizbtnR bgGreen';
+             break;
+        case 'CC':
+        btnClassRight = 'quizbtnR bgPurple';
+             break;
+        case 'CL':
+        btnClassRight =  'quizbtnR bgPink';
+             break;
+        case 'TSS':
+        btnClassRight =  'quizbtnR bgRed';
+             break;
+        case 'PAJ':
+        btnClassRight =  'quizbtnR bgOrange';
+             break;
+        case 'SRI':
+        btnClassRight =  'quizbtnR bgYellow';
+             break;
+  }
+
 
     return (
          <div>
           <Header /> 
            <hr/>
-          <br />
+          {/* <br /> */}
           <div className="aboutWrapper">
+          
           <h3 id="center">Choose the statement that means more to you</h3>
           </div>
+          <div className="progressBarDiv">
+     <div className="center">
+
+            <div className="text-center">1 of 21</div>
+            <Progress color="success" value={1} max={21} />
+              </div>
+           </div>
           <br />
-          <div class="wrapper">
+          <div className="wrapper">
 
       
            <AvForm className="text-form" >
          
          
 
-            <Button className='quizbtnL' name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA}</Button>      
+            <Button className={btnClassLeft} name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA}</Button>      
  
-            <Button className='quizbtnR btn' name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB}</Button>      
-           </AvForm>
+            <Button className={btnClassRight} name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB}</Button>      
+            </AvForm>
      
+     
+  
            </div>
-
+ 
               {/*JSON.stringify(this.state.values)*/}
          
          {fireRedirect && (<Redirect to={from || '/quiz/q2'}/>

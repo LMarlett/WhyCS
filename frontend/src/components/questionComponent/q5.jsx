@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import Header from '../headerComponent/header';
 import './questions.css';
-import { Card,CardImg,CardText,CardBody,CardTitle,CardSubtitle, NavLink,FormGroup,Label,Input,Button,Row,Col,Container } from 'reactstrap';
-import { AvForm, AvField, AvGroup, AvInput, AvFeedback, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
+import { Button, Progress } from 'reactstrap';
+import { AvForm } from 'availity-reactstrap-validation';
 import { Redirect } from 'react-router'
-import _ from 'lodash';
+//import _ from 'lodash';
 import tuples from '../../api/touples';
-import quizQuestions from '../../api/csQuestions';
  import '../../pages/pages.css';
 
  class Q5 extends Component {
@@ -182,26 +181,91 @@ import quizQuestions from '../../api/csQuestions';
 
     const { fireRedirect } = this.state
 
+    // left button image 
+  var btnClassLeft = ''
+  var leftSwitch = this.state.qAcat
+
+      switch(leftSwitch) {
+        case 'EWD':
+        btnClassLeft = 'quizbtnL bgBlue';
+             break;
+        case 'ESJ':
+        btnClassLeft =  'quizbtnL bgGreen';
+             break;
+        case 'CC':
+        btnClassLeft = 'quizbtnL bgPurple';
+             break;
+        case 'CL':
+        btnClassLeft =  'quizbtnL bgPink';
+             break;
+        case 'TSS':
+        btnClassLeft =  'quizbtnL bgRed';
+             break;
+        case 'PAJ':
+        btnClassLeft =  'quizbtnL bgOrange';
+             break;
+        case 'SRI':
+        btnClassLeft =  'quizbtnL bgYellow';
+             break;
+  }
+
+
+  // right button image 
+  var btnClassRight = ''
+  var rightSwitch = this.state.qBcat
+
+      switch(rightSwitch) {
+        case 'EWD':
+        btnClassRight = 'quizbtnR bgBlue';
+             break;
+        case 'ESJ':
+        btnClassRight =  'quizbtnR bgGreen';
+             break;
+        case 'CC':
+        btnClassRight = 'quizbtnR bgPurple';
+             break;
+        case 'CL':
+        btnClassRight =  'quizbtnR bgPink';
+             break;
+        case 'TSS':
+        btnClassRight =  'quizbtnR bgRed';
+             break;
+        case 'PAJ':
+        btnClassRight =  'quizbtnR bgOrange';
+             break;
+        case 'SRI':
+        btnClassRight =  'quizbtnR bgYellow';
+             break;
+  }
+
+
     return (
          <div>
           <Header /> 
            <hr/>
-          <br />
+          {/* <br /> */}
           <div className="aboutWrapper">
           <h3 id="center">Choose the statement that means more to you</h3>
           </div>
+          <div className="progressBarDiv">
+     <div className="center">
+
+            <div className="text-center">5 of 21</div>
+            <Progress color="success" value={5} max={21} />
+            </div>
+           </div>
           <br />
-          <div class="wrapper">
+          <div className="wrapper">
 
       
-<AvForm className="text-form" >
+           <AvForm className="text-form" >
+         
+         
 
-
-
- <Button className='quizbtnL' name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA}</Button>      
-
- <Button className='quizbtnR btn' name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB}</Button>      
-</AvForm>
+            <Button className={btnClassLeft} name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA}</Button>      
+ 
+            <Button className={btnClassRight} name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB}</Button>      
+           </AvForm>
 
 </div>
 

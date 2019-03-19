@@ -1,51 +1,51 @@
 
 import React, { Component } from 'react';
  import {
-  FacebookShareCount,
-  GooglePlusShareCount,
-  LinkedinShareCount,
-  PinterestShareCount,
-  VKShareCount,
-  OKShareCount,
-  RedditShareCount,
-  TumblrShareCount,
+  // FacebookShareCount,
+  // GooglePlusShareCount,
+  // LinkedinShareCount,
+  // PinterestShareCount,
+  // VKShareCount,
+  // OKShareCount,
+  // RedditShareCount,
+  // TumblrShareCount,
 
   FacebookShareButton,
   GooglePlusShareButton,
   LinkedinShareButton,
   TwitterShareButton,
   PinterestShareButton,
-  VKShareButton,
-  OKShareButton,
-  TelegramShareButton,
-  WhatsappShareButton,
+  // VKShareButton,
+  // OKShareButton,
+  // TelegramShareButton,
+  // WhatsappShareButton,
   RedditShareButton,
   EmailShareButton,
-  TumblrShareButton,
-  LivejournalShareButton,
-  MailruShareButton,
-  ViberShareButton,
-  WorkplaceShareButton,
-  LineShareButton,
-  WeiboShareButton,
+  // TumblrShareButton,
+  // LivejournalShareButton,
+  // MailruShareButton,
+  // ViberShareButton,
+  // WorkplaceShareButton,
+  // LineShareButton,
+  // WeiboShareButton,
 
   FacebookIcon,
   TwitterIcon,
   GooglePlusIcon,
   LinkedinIcon,
   PinterestIcon,
-  VKIcon,
-  OKIcon,
-  TelegramIcon,
-  WhatsappIcon,
+  // VKIcon,
+  // OKIcon,
+  // TelegramIcon,
+  // WhatsappIcon,
   RedditIcon,
-  TumblrIcon,
-  MailruIcon,
+  // TumblrIcon,
+  // MailruIcon,
   EmailIcon,
-  LivejournalIcon,
-  ViberIcon,
-  WorkplaceIcon,
-  LineIcon,
+  // LivejournalIcon,
+  // ViberIcon,
+  // WorkplaceIcon,
+  // LineIcon,
 } from 'react-share';
 
 import './socials.css';
@@ -53,14 +53,14 @@ import exampleImage from '../images/whycs_blackboard.jpeg';
 
 
 class CategorySquare extends Component {
-    constructor(props) {
-         super(props); 
+    // constructor(props) {
+    //      super(props); 
 
-    }
+    // }
 
 
     render() {
-        const shareUrl = 'http://www.whycs.org/startQuiz';
+        const shareUrl = 'https://www.whycs.org/startQuiz';
         const title = 'Learn about and find your personal core values in regards to computer science education. Take the WhyCS Quiz now!';
     
         return (

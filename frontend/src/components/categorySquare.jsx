@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import Header from '../components/headerComponent/header';
-import Footer from '../components/footerComponent/footer';
-import '../pages/pages.css';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, NavLink, Button, Row, Col } from 'reactstrap';
-
+  import '../pages/pages.css';
+ 
 var data = [
             //EWD
              {name: 'Economic & Workforce Development', id:'blue'},
@@ -125,6 +122,7 @@ class CategorySquare extends Component {
     r1Text: data[6].name,
     r1ID: data[6].id
     });
+    break;
 
 
     }
@@ -173,7 +171,8 @@ class CategorySquare extends Component {
           r2Text: data[6].name,
           r2ID: data[6].id
           });
-      
+          break;
+
       
           }
       
@@ -221,8 +220,9 @@ class CategorySquare extends Component {
               r3Text: data[6].name,
               r3ID: data[6].id
               });
-          
-          
+              break;
+
+ 
               }
           
                    

@@ -14,10 +14,14 @@ import { Redirect } from 'react-router';
 
 
 var localInstance = axios.create({
-  baseURL: 'whycs.us-east-2.elasticbeanstalk.com/api', 
-  headers: {
+  // method: 'post',
+   //baseURL: 'https://whycsapi.herokuapp.com/api/', 
+   baseURL: 'https://whycs-233104.appspot.com/api/',
+
+ headers: {
     "Accept": "application/json",
-   // "Access-Control-Allow-Origin": "*",
+   "Access-Control-Allow-Origin": "*",
+   
     //'Authorization': 'Bearer '+ USER_TOKEN
 
   }
@@ -106,7 +110,7 @@ var localInstance = axios.create({
   
     var check = ewdcount+cccount+clcount+tsscount+esjcount+sricount+pajcount;
     if ((check !== 21)){
-      alert("Please start the quiz and complete all answers");
+      alert("Please start at the beginning of the quiz and complete all answers");
       //refirect to quiz start page
       this.setState({ fireRedirect: true });
     } else {
@@ -136,11 +140,12 @@ var localInstance = axios.create({
 
     })
         .then((response) => {    
-          //alert(`Server response: \n${JSON.stringify(response.data}`);
-          //alert(`Server response: \n${JSON.stringify(response)}`);
+          // alert(`Server response: \n${JSON.stringify(response.data)}`);
+          // alert(`Server response: \n${JSON.stringify(response.msg)}`);
+           
         })
           .catch((error) => {
-            alert(`Error posting \n${error}`);
+            // alert(`Error posting \n${error}`);
                     })
         
                     

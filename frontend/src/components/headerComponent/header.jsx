@@ -10,13 +10,11 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+ 
 } from 'reactstrap'
 import './header.css'
 import whycsLogo from '../../images/WhyCS-Logo.svg'
+import csLogo from '../../images/cs-logo-2018.svg'
 
 class Header extends Component {
   constructor(props) {
@@ -37,8 +35,12 @@ class Header extends Component {
       <div>
         <header>
           <div className="clearfix">
+          <NavLink href="https://www.csforall.org">
+          <img src={csLogo} className="headerLogo" alt="WhyCS Logo" />
+          </NavLink>
+          <h1 className="pull-left">ASKS &nbsp;</h1> 
           <NavLink href="/home"><img src={whycsLogo} className="headerLogo" alt="WhyCS Logo" /></NavLink>
-            <div>
+              <div className="pull-right">
           <Navbar color="navbarColor" light expand="md">
             <NavbarBrand href="/" className="navbarText">
             </NavbarBrand>

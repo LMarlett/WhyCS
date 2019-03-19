@@ -40,9 +40,9 @@ import Q21 from './components/questionComponent/q21';
 
 
 
-import Quiz from './components/questionComponent/quiz'
+// import Quiz from './components/questionComponent/quiz'
 
-import AuthExample from "./AuthExample";
+// import AuthExample from "./AuthExample";
 
 class App extends Component {
   render() {
@@ -51,7 +51,7 @@ class App extends Component {
         <div>
           <Switch>
           
-          <Route exact path='/auth' component={AuthExample} />
+          {/* <Route exact path='/auth' component={AuthExample} /> */}
 
           <Route exact path='/about' component={About} />
           <Route exact path='/home' component={Home} />

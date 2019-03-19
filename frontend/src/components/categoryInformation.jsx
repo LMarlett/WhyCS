@@ -5,7 +5,7 @@ class CategoryInformation extends Component {
     render() {
         return (
             <div className="categoryInfoWrapper">
-                <p>Even with many different reasons being given for computer science education, there are some commons theme across them. Vogel, Santo and Ching (2017) put forward the <a href="https://drive.google.com/open?id=0B90AflGXRKMFdzFjYkNTTDRSR2s" target="_blank">CSed Visions Framework</a>, which found that most arguments touched on one or more of seven areas of possible impact.</p>
+                <p>Even with many different reasons being given for computer science education, there are some commons theme across them. Vogel, Santo and Ching (2017) put forward the <a href="https://drive.google.com/open?id=0B90AflGXRKMFdzFjYkNTTDRSR2s" rel="noopener noreferrer" target="_blank">CSed Visions Framework</a>, which found that most arguments touched on one or more of seven areas of possible impact.</p>
                 <hr />
                 <div className="category">
                     <h3>Economic and workforce development<small> impacts:</small></h3>
