@@ -1,9 +1,7 @@
-.DS_Store
-node_modules
-config/config.json
-.elasticbeanstalk/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+node_modules/*
+
