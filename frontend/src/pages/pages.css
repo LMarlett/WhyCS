@@ -1,0 +1,384 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+@import url(https://use.fontawesome.com/releases/v5.3.1/css/all.css);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+/* 
+* INDEX
+*
+* Home Styles
+* Main Styles
+* Quiz Start Page
+* Survey Intake Form Styles
+* Results Page
+* Category Information Component
+* Rainbow Category Blocks Header
+* About Page & Results Page Category Descriptions, & Resources
+*
+*/
+
+/* ========== Home Styles ============ */
+.homePage {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+.homeTextWrapper {
+    /* padding: 20px 50px !important; */
+    border: none !important;
+}
+.homePhrase {
+  color: black;
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+.homeCTA {
+  color: #2A5AB2;
+  font-family: 'Lato', sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+.homeQuote {
+  color: black;
+  font-family: 'Lato', sans-serif;
+  font-size: 21px;
+  margin-top: 30px;
+}
+.quoteAuthor {
+    font-size: 14px;
+    text-align: right;
+}
+.homeGraphic {
+  width: 100%;
+  height: auto;
+}
+.buttonWrapper {
+    text-align: center;
+}
+.homeButton {
+    padding: 5px 40px !important;
+    font-size: 20px !important;
+    border: solid #FBA000 4px !important;
+    border-radius: 3px !important;
+    color: #FBA000 !important;
+}
+.homeButton:hover {
+    border-color: #2A5AB2 !important;
+    color: #2A5AB2 !important;
+    background: white !important;
+}
+/* home responsiveness */
+@media only screen and (max-width: 1024px) {
+    .homePage {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .homeCTA {
+      font-size: 40px;
+    }
+  }
+  @media only screen and (max-width: 425px) {
+      .homePage {
+          margin-top: 20px;
+      }
+  }
+/* ========== QUIZ START PAGE =========== */
+
+
+#center{
+  text-align: center;
+}
+
+
+/* ======= SURVEY INTAKE FORM STYLES ======= */
+.intake-form {
+  width: 100% !important;
+  margin: auto !important;
+  padding: 0 20px !important;
+  text-align: left !important;
+}
+.text-form {
+  color: grey !important;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px !important;
+  text-align: left !important;
+}
+
+.radio-text {
+  font-size: 15px !important;
+}
+/* form width on mobile */
+@media only screen and (max-width: 736px) {
+  .intake-form {
+    width: 90%;
+    padding: 0;
+  }
+}
+.intake-form label {
+  color: grey;
+  width: 30%;
+}
+.intake-form .gender {
+  margin-bottom: -20px;
+}
+.intake-form .radio {
+  width: 30%;
+  text-align: center;
+  display: inline;
+  margin: 0;
+}
+.intake-form .radio:first-child {
+  margin-left: 5px;
+}
+.intake-form div {
+    margin: 20px 0px;
+}
+/* responsiveness of intake form */
+@media only screen and (max-width: 1001px) {
+  .intake-form .radio {
+    width: 20%;
+  }
+}
+
+/* ========= Results Page ========= */
+.resultsWrapper {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    color: #2A5AB2;
+    text-align: center;
+}
+.yourResultsWrapper {
+    min-height: 150px;
+}
+.yourResultsWrapper, .resultsChart {
+    margin: 50px 0px;
+    width: 45%;
+    float:left;
+}
+.yourResultsInner {
+    width: 450px;
+    margin: auto;
+}
+.impactAreas {
+    clear: both;
+    text-align: center;
+}
+.impactAreas h2 {
+    margin-bottom: -20px;
+}
+@media only screen and (max-width: 768px) {
+    .resultsWrapper {
+        width: 100%;
+    } 
+    .yourResultsWrapper, .resultsChart {
+        float: none;
+        width: 100%;
+        clear: both;
+        margin: 30px 0px;
+    }
+}
+
+.text{
+    color: white !important;
+}
+/* ===== Category Information Component */
+.categoryInfoWrapper {
+    margin-top: 50px;
+}
+.category h3 {
+    text-align: left;
+    font-size: 20px;
+}
+
+/* ===== Rainbow Category Blocks Header ====== */
+.categoryBlocks_wrapper {
+    width: 1050px;
+    height: 100px;
+    margin: auto;
+    border: none;
+}
+.categoryBlock {
+    width: 150px;
+    height: 150px;
+    float: left;
+    padding: 25px 20px;
+    text-align: center;
+    color: white;
+}
+.categoryBlock p {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* vertical-align: middle;  */
+}
+#blue {background-color: #3fb9f5}
+#green {background-color: #12b1aa}
+#purple {background-color: #8e7cc3}
+#pink {background-color: #e361a6}
+#red {background-color: #e06666}
+#orange {background-color: #e69138}
+#yellow {background-color: #f1c232}
+
+/* Responsiveness of Raninbow Category Blocks Header */
+@media only screen and (max-width: 1320px) {
+    .categoryBlocks_wrapper {
+        width: 840px;
+    }
+    .categoryBlock {
+      width: 120px;
+      height: 120px;
+      padding: 25px 10px;
+    }
+    .categoryBlock p {
+        font-size: 14px;
+    }
+    .yourResultsInner {
+        width: 360px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .categoryBlock {padding: 20px 10px;}
+}
+@media only screen and (max-width: 970px) {
+    .categoryBlocks_wrapper {
+        width: 700px;
+        height: 200px;
+    }
+    .categoryBlock {
+        width: 100px;
+        height: 100px;
+        padding: 15px 10px;
+    }
+    .categoryBlock p {
+        font-size: 12px;
+    }
+    .yourResultsInner {
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 769px) {
+    .categoryBlocks_wrapper {
+        width: 700px;
+        margin: auto;
+        height: 120px;
+    }   
+    .categoryBlock {
+        width: 100px;
+        height: 100px;
+        padding: 15px 10px;
+    }
+    .categoryBlock p {
+        font-size: 12px;
+    } 
+}
+@media only screen and (max-width: 425px) { 
+    .categoryBlocks_wrapper {
+        width: auto;
+        height: 200px;
+    }
+    .categoryBlock {
+        width: 106px;
+        height: 105px;
+        padding: 15px 10px;
+    }
+    .yourResultsInner {
+        width: 318px;
+    }
+}
+@media only screen and (max-width: 375px) { 
+    .categoryBlock {
+        width: 93px;
+        height: 93px;
+    }
+    .yourResultsInner {
+        width: 279px;
+    }
+}
+@media only screen and (max-width: 320px) { 
+    .categoryBlock {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+    }
+    .categoryBlock p {
+        font-size: 11px;
+    }
+    .yourResultsInner {
+        width: 240px;
+    }
+}
+/* ========= About Page & Results Page Category Descriptions ========== */
+.aboutWrapper, .categoryInfoWrapper, .resources {
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    color: grey;
+    font-family: 'Lato', sans-serif;
+}
+.aboutWrapper h3, .category h3, .resources h3 {
+    text-align: left;
+    color: #2A5AB2;
+}
+.resources h4 {
+    color: black;
+    text-align: center;
+    margin: 30px 0px;
+}
+.aboutWrapper p, .categoryInfoWrapper p, .resources p {
+    text-align: justify;
+}
+.aboutWrapper ul li, .category ul li, .resources ul li {
+    text-align: left;
+}
+.aboutWrapper a, .categoryInfoWrapper a {
+    color: #FBA000;
+}
+.categoryInfoWrapper hr {
+    background-color: #2A5AB2;
+    margin: 30px 0px;
+}
+@media only screen and (max-width: 375px) { 
+    .aboutWrapper, .categoryInfoWrapper, .resources {
+        width: 80%;
+    }
+}
+
+
+/* Home page */
+
+blockquote {
+  background: #eee;
+  border-radius: 5px;
+}
+
+blockquote p {
+  padding: 15px;
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
+
+.pageTitle {
+  color: #36b8f8;
+} 
+
+.textHome {
+  color: grey;
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
+  text-align: center !important;
+}
+
+
+/* end Home page */
+
+

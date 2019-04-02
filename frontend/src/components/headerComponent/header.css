@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+@import url(https://use.fontawesome.com/releases/v5.3.1/css/all.css);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+.headerLogo {
+  width: 20%;
+  height: auto;
+  float: left;
+  display: inline;
+ }
+
+.pull-left{
+  float: left;
+  font-size: 16px;
+  color: #3061ac !important;
+  font-family: 'Lato', sans-serif;
+   margin: 0 10px;
+ 
+  }
+.pull-right{
+  float: right;
+}
+
+/* .row{
+  display: table;
+} */
+
+@media only screen and (max-width: 425px) { 
+  .headerLogo {width: 40%;}
+  .navbar-collapse ul p { display: none;}
+  .navbar-collapse ul {text-align: right; margin-right: 6px;}
+}
+.clearfix {
+  padding-top: 30px;
+  padding-left: 15px;
+  
+}
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.headerText {
+  font-family: 'Lato', sans-serif;
+  font-size: 100px;
+  color: #3061ac;
+}
+
+.nav-item a {
+  color: #3061ac !important;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  margin: 0 10px;
+}
+.nav-item a:hover {
+  color: #FBA000 !important;
+}
+
+.navbarColor {
+  color: white;
+}
+
+.ml-auto p {
+  margin-top: 5px;
+  font-size: 20px !important;
+  color:#FBA000;
+}

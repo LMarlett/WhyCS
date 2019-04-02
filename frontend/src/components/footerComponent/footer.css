@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+@import url(https://use.fontawesome.com/releases/v5.3.1/css/all.css);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+
+.WhyCSLogo {
+   text-align: center;
+  width: 40%;
+  height: auto;
+  
+
+}
+.footerBar {
+  /* position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;  */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important; 
+  /* text-align:center !important; */
+}
+
+.footerText {
+     font-size: 12px;
+    color: #3061ac !important;
+    font-family: 'Lato', sans-serif;
+     margin: 0 10px;
+     text-align: center;
+
+    }
+
