@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
 .headerLogo {
-  width: 25%;
+  width: 300px;
   height: auto;
   float: left;
   display: inline;
@@ -36,7 +36,7 @@
   display: table;
 } */
 
-@media only screen and (max-width: 510px) { 
+@media only screen and (max-width: 767px) { 
   .headerLogo {
     width: 45%;
   }
