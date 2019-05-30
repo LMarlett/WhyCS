@@ -72,7 +72,7 @@ class QuizStart extends Component {
       <Col sm="12" md={{ size: 6, offset: 3 }}>
       <AvForm className="text-form" onValidSubmit={this.handleValidSubmit}>
  
-             <AvField className="intake-form" name="zip" label="Zip" type="number"  placeholder="00000" 
+             <AvField className="intake-form" name="zip" label="Zip" type="number" 
              validate={{
                number: true,
                minLength: {value: 5},
@@ -84,7 +84,7 @@ class QuizStart extends Component {
              <AvField className="intake-form" name="career" label="Role" type="text"  errorMessage="Please enter your career type" 
              validate={{
             required: {value: true},
-            pattern: {value: '^[A-Za-z0-9 ]+$'},
+            pattern: {value: '^[A-Za-z0-9 -]+$'},
             minLength: {value: 3},
             maxLength: {value: 25}
           }} />

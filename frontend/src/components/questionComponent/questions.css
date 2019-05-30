@@ -170,10 +170,7 @@
 .btn-outline-secondary.focus, .btn-outline-secondary:focus {
     box-shadow: none !important;
 }
-/* if adding styles for mobile, put them here */
-@media only screen and (max-width: 766px) {
-    
-}
+
 
 
 /*  progress bar */
@@ -193,4 +190,84 @@ text-align: center !important;
 
  .progress-bar-purple {
     background-color: purple !important;
+}
+
+
+ 
+
+/* if adding styles for mobile, put them here */
+@media only screen and (max-width: 766px) {
+    
+
+.quizbtnL {
+    width: 16em;
+    height: 18em;
+    background-color: white !important;
+    border: none !important;
+    font-size: 18px !important;
+    color: black !important;
+    padding: 10% 10% 0% 10% !important;
+    white-space: normal !important;
+     background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 365px 420px !important;
+    margin-right: 0%;
+    margin-left: 0%;
+    margin-top: 10%;
+
+}
+.quizbtnR {
+    width: 16em;
+    height: 18em;
+    background-color: white !important;
+    border: none !important;
+    font-size: 18px !important;
+    color: black !important;
+    padding: 10% 10% 0% 10% !important;
+    white-space: normal !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 365px 410px !important;
+    margin-right: 0%;
+    margin-left: 0%;
+    margin-top: 10%;
+
+}
+
+.bgBlue{
+    background-image:url('../../images/bgBlue.png') !important;
+    /* width height */
+    background-size: 100% 100% !important;
+}
+
+.bgGreen{
+    background-image:url('../../images/bgGreen.png') !important;
+    background-size: 100% 100% !important;
+}
+.bgPurple{
+    background-image:url('../../images/bgPurple.png') !important;
+    background-size: 100% 100%  !important;
+}
+
+.bgPink{
+    background-image:url('../../images/bgPink.png') !important;
+    background-size: 100% 100%  !important;
+}
+.bgRed{
+    background-image:url('../../images/bgRed.png') !important;
+    background-size: 100% 100%  !important;
+}
+
+.bgOrange{
+    background-image:url('../../images/bgOrange.png') !important;
+    background-size: 100% 100%  !important;
+}
+
+.bgYellow{
+    background-image:url('../../images/bgYellow.png') !important;
+    background-size: 100% 100%  !important;
+}
+
+/* ------------ end bachground images ------------ */
+
 }
