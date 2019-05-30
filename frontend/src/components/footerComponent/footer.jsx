@@ -28,9 +28,11 @@ class Footer extends Component {
 
 <footer>  
          <Navbar color="light footerBar" light expand="md">
-         <p className="footerText">Sponsored by</p>
-           <NavLink href="https://www.csforall.org"><img src={csLogo} className="WhyCSLogo" alt="WhyCS Logo" /></NavLink>
-           
+         <div className="logo">
+           <p className="logo-left">Produced by</p>
+           <img src={csLogo} className="WhyCSLogo logo-right" alt="WhyCS Logo" />
+           <NavLink href="https://www.csforall.org"></NavLink>
+           </div>
            
            {/* <NavbarToggler onClick={this.toggle} /> */}
           {/* <Collapse isOpen={this.state.isOpen} navbar>

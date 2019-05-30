@@ -4,7 +4,7 @@
 
 
 .WhyCSLogo {
-   text-align: center;
+   text-align: left;
   width: 40%;
   height: auto;
   
@@ -30,3 +30,47 @@
 
     }
 
+ 
+    .logo-left{
+      float: left;
+      font-size: 80%;
+      color: #3061ac !important;
+      font-family: 'Lato', sans-serif;
+       /* margin:100px 5px 0px 25px ; */
+      margin: 2% 0% 0% 18% ;
+      }
+      
+    .logo-right{
+      float: right;
+           margin: 0% 15% 0% 0% ;
+
+    }
+
+    .logo {
+      padding-top: 5px;
+      padding-left: 5px;
+      
+    }
+    .logo::after {
+      content: '';
+      clear: both;
+      display: table;
+    } 
+
+
+    @media only screen and (max-width: 320px) { 
+      .logo-left{
+        float: left;
+        font-size: 80%;
+        color: #3061ac !important;
+        font-family: 'Lato', sans-serif;
+         /* margin:100px 5px 0px 25px ; */
+        margin: 2% 0% 0% 15% ;
+        }
+        
+      .logo-right{
+        float: right;
+             margin: 0% 10% 0% 0% ;
+  
+      }
+    }
