@@ -1,5 +1,25 @@
 {
   "projects": {
-    "default": "whycs-233104"
+    "dev": "whycs-233104",
+    "prod": "summit-website-production"
+  },
+  "targets": {
+    "whycs-233104": {
+      "hosting": {
+        "whycs-dev": [
+          "whycs-233104"
+        ],
+        "whycs-dev-test": [
+          "test-whycs"
+        ]
+      }
+    },
+    "summit-website-production": {
+      "hosting": {
+        "whycs-prod": [
+          "whycs-production"
+        ]
+      }
+    }
   }
 }

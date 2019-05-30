@@ -245,7 +245,7 @@ import tuples from '../../api/touples';
            <hr/>
           {/* <br /> */}
           <div className="aboutWrapper">
-          <h3 id="center">Choose the statement that means more to you</h3>
+          <h3 id="center">Which statement better reflects your core values?</h3>
           </div>
           <div className="progressBarDiv">
      <div className="center">

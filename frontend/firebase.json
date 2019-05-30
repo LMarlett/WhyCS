@@ -1,5 +1,37 @@
 {
-  "hosting": {
+  "hosting": [
+    {
+      "target": "whycs-dev",
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "whycs-prod",
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "whycs-dev-test",
     "public": "build",
     "ignore": [
       "firebase.json",
@@ -13,4 +45,5 @@
       }
     ]
   }
+]
 }
