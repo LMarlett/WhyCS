@@ -4,7 +4,7 @@ import './questions.css';
 import {Button, Progress} from 'reactstrap';
 import { AvForm } from 'availity-reactstrap-validation';
 import { Redirect } from 'react-router'
-import _ from 'lodash';
+//import _ from 'lodash';
 import tuples from '../../api/touples';
   import '../../pages/pages.css';
 
@@ -140,6 +140,8 @@ import tuples from '../../api/touples';
 
  
   }
+
+
  
   componentWillMount() {
     // const Q11 = tuples[0][0][0].qText;

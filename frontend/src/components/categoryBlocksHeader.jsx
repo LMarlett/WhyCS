@@ -19,7 +19,7 @@ class CategoryBlocksHeader extends Component {
                 </div>
 
                 <div className="categoryBlock" id="pink">
-                    <p>Scientific, Technological, & Social Innovation</p>
+                    <p>Technological, Social & Scientific Innovation</p>
                 </div>
             
                 <div className="categoryBlock" id="red">

@@ -184,7 +184,7 @@ var localInstance = axios.create({
     <BaseButtonExample />
    </div>
 
-            <a className="btn btn-danger text" role="button" href='#impactAreas' >Learn more about impact areas</a>
+            <a className="btn btn-danger text" role="button" href='#impactAreas' >Learn more about Core Values</a>
 
              
             </div>
@@ -206,14 +206,14 @@ var localInstance = axios.create({
  
 
           <div className="impactAreas" id='impactAreas'>
-            <h2>Learn More About Impact Areas</h2>
+            <h2>Learn More About Core Values</h2>
 
             <br/>
             <br/>
             <CategoryBlocksHeader />
 <br/>
           {/* <NavLink href="#">
-            <Button outline color="secondary">Learn More About Impact Areas</Button>
+            <Button outline color="secondary">Learn More About Core Values</Button>
           </NavLink> */}
           </div>
 

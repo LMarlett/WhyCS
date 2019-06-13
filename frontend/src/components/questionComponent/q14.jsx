@@ -4,7 +4,7 @@ import './questions.css';
 import { Button, Progress } from 'reactstrap';
 import { AvForm } from 'availity-reactstrap-validation';
 import { Redirect } from 'react-router'
-import _ from 'lodash';
+//import _ from 'lodash';
 import tuples from '../../api/touples';
  import '../../pages/pages.css';
  class Q14 extends Component {

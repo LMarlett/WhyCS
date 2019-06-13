@@ -8,7 +8,7 @@ class CategoryInformation extends Component {
                 <p>Even with many different reasons being given for computer science education, there are some commons theme across them. Vogel, Santo and Ching (2017) put forward the <a href="https://drive.google.com/open?id=0B90AflGXRKMFdzFjYkNTTDRSR2s" rel="noopener noreferrer" target="_blank">CSed Visions Framework</a>, which found that most arguments touched on one or more of seven areas of possible impact.</p>
                 <hr />
                 <div className="category">
-                    <h3>Economic and workforce development<small> impacts:</small></h3>
+                    <h3>Economic and Workforce Development<small> impacts:</small></h3>
                     <p>Arguments linked in some way to professional participation in computing, labor empowerment, needs of industry, economic development, workforce pipelines, or shifting the constitution and/or focus of technology and related sectors.</p>
                     <p>This area includes statements like  “We should teach CS because…”</p>
                     <ul>
@@ -20,7 +20,7 @@ class CategoryInformation extends Component {
                 </div>
                 <hr />
                 <div className="category">
-                    <h3>Equity and social justice <small>impacts:</small></h3>
+                    <h3>Equity and Social Justice <small>impacts:</small></h3>
                     <p>Arguments that emphasized the importance of equitable distribution of various benefits associated with CS education—social, technological, economic, civic, intellectual, and otherwise. In some cases, these arguments go beyond equitable access and opportunity, suggesting that CS education could actively promote social justice impacts and the dismantling of social hierarchies.</p>
                     <p>This area includes statements like  “We should teach CS because…”</p>
                     <ul>
@@ -32,8 +32,8 @@ class CategoryInformation extends Component {
                 </div>
                 <hr />
                 <div className="category">
-                    <h3>Competencies and literacies<small> impacts:</small></h3>
-                    <p>Arguments that highlight particular  competencies (eg: design thinking, systems thinking, computational thinking, 21st century skills) as important for some broader reason—usually related to one of the other impact areas—and CS education as uniquely positioned to support these competencies.</p>
+                    <h3>Competencies and Literacies<small> impacts:</small></h3>
+                    <p>Arguments that highlight particular  competencies (eg: design thinking, systems thinking, computational thinking, 21st century skills) as important for some broader reason—usually related to one of the other core values—and CS education as uniquely positioned to support these competencies.</p>
                     <p>This area includes statements like  “We should teach CS because…”</p>
                     <ul>
                         <li>...it promotes 21st century skills like creativity, collaboration and communication.</li>
@@ -44,7 +44,7 @@ class CategoryInformation extends Component {
                 </div>
                 <hr />
                 <div className="category">
-                    <h3>Citizenship and civic engagement <small>impacts:</small></h3>
+                    <h3>Citizenship and Civic Engagement <small>impacts:</small></h3>
                     <p>these arguments relate CS education to social, cultural and political participation, reasoning that an increasingly technologically mediated future might impact the ways citizenship is conceptualized and enacted.</p>
                     <p>This area includes statements like  “We should teach CS because…”</p>
                     <ul>
@@ -56,7 +56,7 @@ class CategoryInformation extends Component {
                 </div>
                 <hr />
                 <div className="category">
-                    <h3>Scientific, technological and social innovation <small>impacts:</small></h3>
+                    <h3>Technological, Social and Scientific Innovation <small>impacts:</small></h3>
                     <p>these arguments view CS education is either a prerequisite for scientific, technological and social advancement, or that CS education will enhance society’s ability to produce such innovations and towards different ends.</p>
                     <p>This area includes statements like  “We should teach CS because…”</p>
                     <ul>
@@ -68,7 +68,7 @@ class CategoryInformation extends Component {
                 </div>
                 <hr />
                 <div className="category">
-                    <h3>School improvement and reform <small>impacts:</small></h3>
+                    <h3>School Reform and Improvement <small>impacts:</small></h3>
                     <p>arguments linked to how CS education might work in service of broader school-reform goals, benefiting students, teachers, school administrators or broader education systems as they are today, as opposed to focusing on future pathways as workers or citizens.</p>
                     <p>This area includes statements like  “We should teach CS because…”</p>
                     <ul>
