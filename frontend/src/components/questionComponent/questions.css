@@ -1,77 +1,72 @@
+ 
+  /* Standard syntax */
+  @keyframes inLeft {
+    from {
+        opacity: 0;
+        transform: scale(0.3) translate3d(-100px, 0, 0);
+        transform-origin: left center;
+      }
+      60% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+    
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+    
+    }
+ 
+  /* Safari 4.0 - 8.0 */
+@-webkit-keyframes inLeft {
+    from {
+        opacity: 0;
+        transform: scale(0.3) translate3d(-100px, 0, 0);
+        transform-origin: left center;
+      }
+      60% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+    
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+      
+    }
+ 
+  /* Standard syntax */
+  @keyframes inRight {
+    from {
+        opacity: 0;
+    transform: scale(0.3) translate3d(100px, 0, 0);
+    transform-origin: right center;
+      }
+      60% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+    
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+    
+    }
 
 
-/* 
- .center {
-    text-align: center;
-  }
-  
-  .quizbtnL {
-    float: left;
-    border-radius: 30px !important;
-    width: 365px;
-    height: 400px;
-    background-color: white !important;
-    border: none !important;
-    text-align: center;
-    padding-top:120px !important;
-    font-size: 17px !important;
-    font-family: CircularStd;
-    padding: 15px 32px;
-    white-space: normal !important;
-    background-image:url('../../images/quizbg.png') !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: 365px 420px !important;
-
-  }
-
-  
-  .quizbtnR {
-    float: right;
-    border-radius: 30px !important;
-    width: 365px;
-    height: 400px;
-    background-color: white !important;
-    border: none !important;
-    text-align: center;
-    padding-top:120px !important;
-    font-size: 17px !important;
-    font-family: CircularStd;
-    padding: 15px 32px;
-    white-space: normal !important;
-    background-image:url('../../images/quizbg.png') !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: 365px 420px !important;
-
-  }
-
-
-  
-  .quizbtnR:hover { 
-    color: #ed185b !important;
-}
-
-
-.quizbtnL:hover { 
-    color: #ed185b !important;
-}
-
-
-.wrapper {
-    width: 80%;
-    height: 500px;
-    text-align: center;
-    position: relative;
-    top:70px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-
-
-} */
-
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes inRight {
+    from {
+        opacity: 0;
+    transform: scale(0.3) translate3d(100px, 0, 0);
+    transform-origin: right center;
+      }
+      60% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+    
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+    
+    }
 
 .center {
     text-align: center;
@@ -91,12 +86,14 @@
     color: black !important;
     padding: 80px 50px 0px 50px !important;
     white-space: normal !important;
-     background-repeat: no-repeat !important;
+    background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: 365px 420px !important;
     margin-right: 10px;
     margin-left: 10px;
     margin-top: 30px;
+    -webkit-animation: inLeft 1.5s; /* Safari 4.0 - 8.0 */
+    animation: inLeft  1.5s ;
 
 }
 .quizbtnR {
@@ -114,7 +111,8 @@
     background-size: 365px 420px !important;
     margin-left: 10px;
     margin-right: 10px;
-
+    -webkit-animation: inRight 1.5s; /* Safari 4.0 - 8.0 */
+    animation: inRight  1.5s ;
 }
 
 
@@ -197,7 +195,70 @@ text-align: center !important;
 
 /* if adding styles for mobile, put them here */
 @media only screen and (max-width: 919px) {
+      /* Standard syntax */
+  @keyframes inLeft {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+      }
+      60% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
     
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+    
+    }
+ 
+  /* Safari 4.0 - 8.0 */
+@-webkit-keyframes inLeft {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+      }
+      60% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+    
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+      
+    }
+ 
+  /* Standard syntax */
+  @keyframes inRight {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+      }
+      60% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+    
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+    
+    }
+
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes inRight {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+      }
+      60% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+    
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+    
+    }
 
 .quizbtnL {
     width: 17em;
@@ -214,7 +275,8 @@ text-align: center !important;
     margin-right: 1%;
     margin-left: 1%;
     margin-top: 10%;
-
+    -webkit-animation: inLeft 1.5s; /* Safari 4.0 - 8.0 */
+    animation: inLeft  1.5s ;
 }
 .quizbtnR {
     width: 17em;
@@ -231,6 +293,8 @@ text-align: center !important;
     margin-right: 1%;
     margin-left: 1%;
     margin-top: 10%;
+    -webkit-animation: inRight 1.5s; /* Safari 4.0 - 8.0 */
+    animation: inRight  1.5s ;
 
 }
 
@@ -283,7 +347,7 @@ text-align: center !important;
  
 /* if adding styles for mobile, put them here */
 @media only screen and (max-width: 320px) {
-    
+     
 
     .quizbtnL {
         width: 16em;
@@ -300,6 +364,7 @@ text-align: center !important;
         margin-right: 1%;
         margin-left: 1%;
         margin-top: 10%;
+
     
     }
     .quizbtnR {
@@ -317,6 +382,7 @@ text-align: center !important;
         margin-right: 1%;
         margin-left: 1%;
         margin-top: 10%;
+
     
     }
     

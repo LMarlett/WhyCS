@@ -60,7 +60,7 @@ class CategorySquare extends Component {
 
 
     render() {
-        const shareUrl = 'https://www.whycs.org/startQuiz';
+        const shareUrl = 'www.whycs.org/startQuiz';
         const title = 'Learn about and find your personal core values in regards to computer science education. Take the WhyCS Quiz now!';
     
         return (
@@ -70,8 +70,7 @@ class CategorySquare extends Component {
               <FacebookShareButton
                 url={shareUrl}
                 quote={title}
-                image={`${String(window.location)}/${exampleImage}`}
-
+                picture={`${String(window.location)}/${exampleImage}`}
                 className="Demo__some-network__share-button">
                 <FacebookIcon
                   size={32}
@@ -98,18 +97,6 @@ class CategorySquare extends Component {
               </div>
             </div>
     
-    
-            <div className="Demo__some-network">
-              <GooglePlusShareButton
-                url={shareUrl}
-                className="Demo__some-network__share-button">
-                <GooglePlusIcon
-                  size={32}
-                  round />
-              </GooglePlusShareButton>
-    
-              
-            </div>
     
             <div className="Demo__some-network">
               <LinkedinShareButton

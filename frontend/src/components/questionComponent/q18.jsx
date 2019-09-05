@@ -7,6 +7,8 @@ import { Redirect } from 'react-router'
 //import _ from 'lodash';
 import tuples from '../../api/touples';
  import '../../pages/pages.css';
+ import Fade from 'react-reveal/Fade';
+ import Pulse from 'react-reveal/Pulse';
 
  class Q18 extends Component {
   
@@ -256,17 +258,13 @@ import tuples from '../../api/touples';
            </div>
           <br />
           <div className="wrapper">
-
-      
-           <AvForm className="text-form" >
-         
-         
-
-            <Button className={btnClassLeft} name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA}</Button>      
  
-            <Button className={btnClassRight} name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB}</Button>      
-            </AvForm>
-     
+              <AvForm className="text-form" >
+                <Button className={btnClassLeft} name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA}</Button>      
+        
+                <Button className={btnClassRight} name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB}</Button>      
+              </AvForm>
+  
            </div>
 
 

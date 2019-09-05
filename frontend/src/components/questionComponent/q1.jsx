@@ -6,6 +6,11 @@ import { AvForm } from 'availity-reactstrap-validation';
 import { Redirect } from 'react-router';
 import _ from 'lodash';
 import tuples from '../../api/touples';
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
+import Pulse from 'react-reveal/Pulse';
+
+
 // import touplesShuffled from '../../api/touples';
   import '../../pages/pages.css';
 import QuestionContext from '../../api/questionContext';
@@ -274,19 +279,14 @@ console.log(array);
               </div>
            </div>
           <br />
+
           <div className="wrapper">
-
-      
-           <AvForm className="text-form" >
-         
-         
-
-            <Button className={btnClassLeft} name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA}</Button>      
  
+            <AvForm className="text-form" >
+            <Button className={btnClassLeft} name='A' onClick={this.handleValidSubmit} outline color="secondary" id={this.state.qAcat}>{this.state.qA}</Button>      
+        
             <Button className={btnClassRight} name='B' onClick={this.handleValidSubmit} outline color="secondary"id={this.state.qBcat}>{this.state.qB}</Button>      
             </AvForm>
-     
-     
   
            </div>
  
