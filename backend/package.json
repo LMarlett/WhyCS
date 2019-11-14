@@ -7,7 +7,6 @@
     "start": "nodemon -L app.js",
     "test": "jest",
     "web": "node app.js"
-
   },
   "author": "Lilli Jimenez",
   "license": "ISC",
@@ -20,14 +19,13 @@
     "event-stream": "^3.3.4",
     "express": "^4.16.1",
     "express-handlebars": "^3.0.0",
-    "helmet": "^3.15.0",
+    "helmet": "^3.21.2",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.5",
     "pg": "^7.3.0",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.41.0"
+    "sequelize": "^4.44.3"
   },
-
   "engines": {
     "node": "10.x.x"
   }
