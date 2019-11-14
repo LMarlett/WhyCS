@@ -1,2 +1,6 @@
  .DS_Store
- backend/node_modules
+backend/node_modules
+backend/config/config.json
+fontend/.firebaserc
+frontend/build
+.vscode
