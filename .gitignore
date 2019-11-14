@@ -3,3 +3,4 @@ backend/node_modules
 fontend/.firebaserc
 frontend/build
 .vscode
+backend/config/config.json
