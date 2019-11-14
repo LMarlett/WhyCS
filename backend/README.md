@@ -9,7 +9,8 @@
 
 - Add `config/config.json`
     + Add your username, password, and database names
- ``` { 
+ ``` 
+ { 
    "production": {
       "username": "",
       "password": "",
@@ -17,7 +18,8 @@
       "host": "",
       "dialect": ""
     }
-}```
+} 
+```
 ## Explanations
 
 - `/config/config.json`
