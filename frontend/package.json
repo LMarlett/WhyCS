@@ -10,7 +10,7 @@
     "circular-std": "^1.0.0",
     "file-loader": "^2.0.0",
     "html2canvas": "^1.0.0-rc.3",
-    "jquery": "^1.9.1",
+    "jquery": "^3.4.0",
     "lodash": "^4.17.11",
     "react": "^16.6.3",
     "react-addons-css-transition-group": "^15.6.2",
