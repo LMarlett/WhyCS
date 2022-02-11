@@ -19,7 +19,7 @@
     "cors": "^2.8.5",
     "event-stream": "^3.3.4",
     "express": "^4.16.1",
-    "express-handlebars": "^3.0.0",
+    "express-handlebars": "^5.3.1",
     "helmet": "^3.21.2",
     "mem": "^6.0.0",
     "morgan": "^1.9.1",
